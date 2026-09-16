@@ -1,5 +1,19 @@
+---
+name: ficha-alumnos
+description: crear ficha por alumno en HTML expotable a PDF
+---
+
 
 # Skill: Gestión de fichas de alumnos
+
+Crea una ficha de alumno por cada alumno en un HTML individual que tenga el nombre del alumno y un identificador único. La ficha debe contener información relevante para el departamento de captación y para los profesores, incluyendo datos de contacto, historial formativo, conocimientos previos, objetivos y preferencias de contacto.
+
+El HTML ha de tener un diseño claro y estructurado, con secciones diferenciadas para cada tipo de información. Además, debe incluir un resumen para el profesor que resuma la formación previa, experiencia, nivel declarado, conocimientos dominados, carencias y objetivos del alumno.
+
+Y un botón imprimir y otro Guardar como PDF para su descarga.
+
+E inserta una foto de ejemplo del alumno que puedes extraer de un banco de imágenes gratuito, como Unsplash o Pexels, para ilustrar la ficha.
+
 
 ## Objetivo
 
