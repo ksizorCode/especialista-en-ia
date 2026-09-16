@@ -14,3 +14,5 @@ forma de redactar textos que nos servirá para dar instrucciones a la ia:
 |---|---|---|
 | Desayuno | Desayuno | Desayuno|
 | Clase    | Clase    | Gimnasio|
+
+```<h1>Hola Mundo</h1>```
