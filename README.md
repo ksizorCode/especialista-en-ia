@@ -1,1 +1,2 @@
-# especialista-en-ia
+# 🤖 Especialista en iA
+Curso de Dicampus la calzada
