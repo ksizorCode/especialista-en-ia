@@ -13,6 +13,8 @@ La tecla `Ctrl` de Windows suele equivaler a `Cmd (⌘)` en macOS. En este docum
 | Copiar | `Ctrl + C` |
 | Cortar | `Ctrl + X` |
 | Pegar | `Ctrl + V` |
+| Pegar sin formato| `Ctrl + Shift + V` |
+| Historial de Portapapeles | `Win + V` |
 | Deshacer | `Ctrl + Z` |
 | Rehacer | `Ctrl + Y` o `Ctrl + Shift + Z` |
 | Seleccionar todo | `Ctrl + A` |
