@@ -1,18 +1,4 @@
 # 🤖 Especialista en iA
 Curso de Dicampus la calzada
 
-## Mark Down
-forma de redactar textos que nos servirá para dar instrucciones a la ia:
-
--a as
--as dfsa 
--a sdsad
--a sdf
-
-
-| Lunes | Martes |Miércoles|
-|---|---|---|
-| Desayuno | Desayuno | Desayuno|
-| Clase    | Clase    | Gimnasio|
-
-```<h1>Hola Mundo</h1>```
+https://www.figma.com/board/CGnSkKXxCoFNDu9oHYKJ25/Curso-Especialista-en-IA?node-id=0-1&t=nVTVALdKEXiwMvIj-1
