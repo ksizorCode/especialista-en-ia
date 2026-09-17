@@ -11,6 +11,10 @@ Cuando un modelo genera información falsa, inventada o no respaldada por los da
 * **¿Por qué ocurre?** Los modelos de lenguaje no "piensan" ni consultan una base de verdad absoluta; generan texto prediciendo la palabra más probable a continuación basándose en patrones estadísticos.
 * **Ejemplo:** Si le pides a una IA que cite un estudio científico sobre un tema muy específico, podría inventarse el título del artículo, los autores y el año de publicación con un formato impecable.
 
+Ver más:
+- https://www.elmundo.es/internacional/2026/09/17/6aabedd2e9cf4aa5768b4582.html
+- https://www.expansion.com/juridico/2026/07/29/6a6a092ae5fdea114e8b458e.html
+
 ---
 
 ## 2. Ventana de Contexto (Context Window)
