@@ -17,6 +17,10 @@ Ver más:
 
 ---
 
+## Artefactos
+
+## Find Tunning
+
 ## 2. Ventana de Contexto (Context Window)
 Cantidad máxima de información (medida en *tokens*) que un modelo de lenguaje puede procesar y recordar en una sola interacción o conversación. Es decir, La cantidad de información que un modelo puede tener en cuenta simultáneamente durante una interacción.
 
