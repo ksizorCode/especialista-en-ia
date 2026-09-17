@@ -52,7 +52,7 @@ Ver tambien:
 - https://gpt.space/es/blog/understanding-openai-gpt-tokens-a-comprehensive-guide
 - https://neuraltrust.ai/es/blog/ai-token-optimization-guide
 
-Tokenizador
+Tokenizador:
 - https://platform.openai.com/tokenizer
 - https://www.claudetokenizer.com/
 - https://claude-tokenizer.vercel.app/
