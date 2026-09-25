@@ -2,10 +2,10 @@
 Curso de Dicampus la calzada
 
 
-|ico | Qué es            | enlace               |
-|----|-------------------|----------------------|
-|🖋️ | FigmaJam          | https://www.figma.com/board/CGnSkKXxCoFNDu9oHYKJ25/Curso-Especialista-en-IA?node-id=0-1&t=nVTVALdKEXiwMvIj-1 |
-| 📂| Drive Google Colab | https://drive.google.com/drive/folders/1QLU51ySgYSNvhi0GE80ocUDfrlXvQNQo?usp=drive_link |
+|ico| Qué es                | enlace               |
+|---|-----------------------|----------------------|
+|🖋️| FigmaJam               | https://www.figma.com/board/CGnSkKXxCoFNDu9oHYKJ25/Curso-Especialista-en-IA?node-id=0-1&t=nVTVALdKEXiwMvIj-1 |
+|📂| Drive Google Colab     | https://drive.google.com/drive/folders/1QLU51ySgYSNvhi0GE80ocUDfrlXvQNQo?usp=drive_link |
 
 ## github de Alumnos del curso
 
