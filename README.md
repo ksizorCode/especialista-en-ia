@@ -6,6 +6,7 @@ Curso de Dicampus la calzada
 |---|-----------------------|----------------------|
 |🖋️| FigmaJam               | https://www.figma.com/board/CGnSkKXxCoFNDu9oHYKJ25/Curso-Especialista-en-IA?node-id=0-1&t=nVTVALdKEXiwMvIj-1 |
 |📂| Drive Google Colab     | https://drive.google.com/drive/folders/1QLU51ySgYSNvhi0GE80ocUDfrlXvQNQo?usp=drive_link |
+|🚀| Github Pages     | https://ksizorcode.github.io/especialista-en-ia/ |
 
 ## github de Alumnos del curso
 
