@@ -37,3 +37,4 @@ Curso de Dicampus la calzada
 | Google Colab                 | Entorno Jupyter en la nube para programar en Python.                     | [colab.research.google.com](https://colab.research.google.com/) |
 | Notion                       | Notas, documentos, bases de datos y gestión de proyectos.                | [notion.com](https://www.notion.com/) |
 | Figma Design / FigJam        | Diseño de interfaces y trabajo colaborativo en pizarra.                  | [figma.com](https://www.figma.com/) |
+| Techeable Machine             | Herramienta para entrenar de forma simple Computer Vision (detección objetos por cámara)  |https://teachablemachine.withgoogle.com/|
