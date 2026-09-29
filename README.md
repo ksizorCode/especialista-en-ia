@@ -23,19 +23,17 @@ Curso de Dicampus la calzada
 
 ## Programillas
 
-|Programa                    | Que haz?                                       | URL                      |
-|----------------------------|------------------------------------------------|--------------------------|
-|Orange Data Minner (ODM)    |                                                |                          |
-|Knime                       | Aleternativa a ODM                             | https://knime.com/       |
-|Weka                        | Aleternativa a ODM                             | https://weka.ai/         |
-|Google Trends               | Descipción                                     | https://URL.com          |
-|Google Data Studio (Looker) | Descipción                                     | https://URL.com          |
-|Google Flow                 | IA generación de imágenes                      | https://URL.com          |
-|Google Stitch               | IA Generación de interfaces                    | https://URL.com          |
-|Google Notebook LM          | IA                                             | https://URL.com           |
-|Google Gems                 | IA Descipción                                  | https://URL.com           |
-|Google Colab                | Platagorma  programación Python tipo Jupetiter | https://URL.com           |
-|Notion                      | ...                                            | https://URL.com           |
-|Figma Design/ Jam…          | ...                                            | https://URL.com           |
-
-                                
+| Programa                     | ¿Qué hace?                                                               | URL               |
+|:-----------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------:|
+| Orange Data Mining           | Análisis visual de datos y aprendizaje automático sin apenas código.     | [orangedatamining.com](https://orangedatamining.com/) |
+| KNIME                        | Crea flujos visuales para preparar y analizar datos.                     | [knime.com](https://www.knime.com/) |
+| Weka                         | Herramientas de minería de datos y aprendizaje automático.               | [waikato.ac.nz/ml/weka](https://ml.cms.waikato.ac.nz/weka/) |
+| Google Trends                | Analiza y compara tendencias de búsqueda en Google.                      | [trends.google.com](https://trends.google.com/) |
+| Looker Studio                | Crea informes y paneles interactivos con datos.                          | [lookerstudio.google.com](https://lookerstudio.google.com/) |
+| Google Flow                  | Estudio creativo con IA para generar vídeos e imágenes.                  | [flow.google.com](https://flow.google.com/) |
+| Google Stitch                | Genera y prototipa interfaces mediante IA.                               | [stitch.withgoogle.com](https://stitch.withgoogle.com/) |
+| Gemini Notebook (NotebookLM) | Investiga, resume y consulta documentos con IA.                          | [Gemini Notebook](https://workspace.google.com/products/gemini-notebook/) |
+| Gems de Gemini               | Crea asistentes de IA personalizados para tareas concretas.              | [gemini.google.com/gems](https://gemini.google.com/gems/) |
+| Google Colab                 | Entorno Jupyter en la nube para programar en Python.                     | [colab.research.google.com](https://colab.research.google.com/) |
+| Notion                       | Notas, documentos, bases de datos y gestión de proyectos.                | [notion.com](https://www.notion.com/) |
+| Figma Design / FigJam        | Diseño de interfaces y trabajo colaborativo en pizarra.                  | [figma.com](https://www.figma.com/) |
