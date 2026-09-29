@@ -26,12 +26,12 @@ Curso de Dicampus la calzada
 |Programa                    | Que haz?                                       | URL                      |
 |----------------------------|------------------------------------------------|--------------------------|
 |Orange Data Minner (ODM)    |                                                |                          |
-|Knime                       | Aleternativa a ODM                             | https://knime.com/        |
-|Weka                        |                                                | https://weka.ai/          |
-|Google Trends               | Descipción                                     | https://URL.com           |
-|Google Data Studio (Looker) | Descipción                                     | https://URL.com           |
-|Google Flow                 | IA generación de imágenes                      | https://URL.com           |
-|Google Stitch               | IA Generación de interfaces                    | https://URL.com           |
+|Knime                       | Aleternativa a ODM                             | https://knime.com/       |
+|Weka                        | Aleternativa a ODM                             | https://weka.ai/         |
+|Google Trends               | Descipción                                     | https://URL.com          |
+|Google Data Studio (Looker) | Descipción                                     | https://URL.com          |
+|Google Flow                 | IA generación de imágenes                      | https://URL.com          |
+|Google Stitch               | IA Generación de interfaces                    | https://URL.com          |
 |Google Notebook LM          | IA                                             | https://URL.com           |
 |Google Gems                 | IA Descipción                                  | https://URL.com           |
 |Google Colab                | Platagorma  programación Python tipo Jupetiter | https://URL.com           |
