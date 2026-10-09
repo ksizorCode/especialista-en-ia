@@ -38,3 +38,8 @@ Curso de Dicampus la calzada
 | Notion                       | Notas, documentos, bases de datos y gestión de proyectos.                | [notion.com](https://www.notion.com/) |
 | Figma Design / FigJam        | Diseño de interfaces y trabajo colaborativo en pizarra.                  | [figma.com](https://www.figma.com/) |
 | Techeable Machine             | Herramienta para entrenar de forma simple Computer Vision (detección objetos por cámara)  |https://teachablemachine.withgoogle.com/|
+
+
+
+## Truco para estructura el sistema de agentes en VSCode
+- Prompt: crea la estructura de carpetas necesaria para los agentes que me permita indicar instrucciones que se cumplan siempre, reglas, normas y habilidades, y características de diseño
