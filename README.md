@@ -43,3 +43,11 @@ Curso de Dicampus la calzada
 
 ## Truco para estructura el sistema de agentes en VSCode
 - Prompt: crea la estructura de carpetas necesaria para los agentes que me permita indicar instrucciones que se cumplan siempre, reglas, normas y habilidades, y características de diseño
+
+## Modelos de generación de video profesional
+Actualmente uno de los más potentes es Seedance 2.5
+
+- https://ai.byteplus.com/en/activity/seedance2-5
+- https://artlist.io/ai/models/seedance-2-5
+- https://www.pippit.ai/tools/seedance-2-5-price-discount
+- https://runway.com/product
