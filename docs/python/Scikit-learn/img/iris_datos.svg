@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-labelledby="title desc">
+  <title id="title">De una flor Iris a una fila de datos y un punto en un gráfico</title>
+  <desc id="desc">La flor 50 tiene un pétalo de 4,7 centímetros de largo y 1,4 de ancho. Su fila X contiene esos dos números, y su especie y es versicolor. Esas medidas sitúan la flor en el punto 4,7 y 1,4 de un gráfico.</desc>
+  <rect x="1" y="1" width="998" height="388" rx="20" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="32" y="44" fill="#0f172a" font-family="Arial, sans-serif" font-size="23" font-weight="700">¿Cómo se convierte una flor en datos?</text>
+  <text x="32" y="70" fill="#475569" font-family="Arial, sans-serif" font-size="15">Ejemplo real del conjunto Iris: la flor número 50 es versicolor.</text>
+
+  <rect x="28" y="94" width="296" height="265" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="352" y="94" width="296" height="265" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="676" y="94" width="296" height="265" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+
+  <text x="48" y="126" fill="#92400e" font-family="Arial, sans-serif" font-size="17" font-weight="700">1. Medimos el pétalo</text>
+  <g transform="translate(126 212)">
+    <path d="M0 34 C-11 -2 -30 -41 0 -71 C30 -41 11 -2 0 34Z" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+    <path d="M-3 34 C-48 29 -70 2 -60 -21 C-28 -28 -7 4 -3 34Z" fill="#fcd34d" stroke="#d97706" stroke-width="2"/>
+    <path d="M3 34 C48 29 70 2 60 -21 C28 -28 7 4 3 34Z" fill="#fcd34d" stroke="#d97706" stroke-width="2"/>
+    <path d="M-2 28 C-32 46 -41 67 -24 78 C-1 75 3 47 -2 28Z" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+    <path d="M2 28 C32 46 41 67 24 78 C1 75 -3 47 2 28Z" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+    <circle cx="0" cy="25" r="13" fill="#92400e"/>
+    <path d="M0 37 V91" stroke="#15803d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M0 68 C-17 52 -30 56 -39 64 C-22 78 -10 78 0 68Z" fill="#22c55e" stroke="#15803d"/>
+    <path d="M0 77 C18 59 31 63 39 71 C22 84 10 86 0 77Z" fill="#22c55e" stroke="#15803d"/>
+  </g>
+  <text x="48" y="316" fill="#334155" font-family="Arial, sans-serif" font-size="15">Largo: <tspan font-weight="700">4,7 cm</tspan></text>
+  <text x="180" y="316" fill="#334155" font-family="Arial, sans-serif" font-size="15">Ancho: <tspan font-weight="700">1,4 cm</tspan></text>
+
+  <path d="M329 222 H347" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M340 216 L348 222 L340 228" fill="none" stroke="#64748b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="372" y="126" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="17" font-weight="700">2. Guardamos una fila</text>
+  <text x="372" y="175" fill="#475569" font-family="Arial, sans-serif" font-size="15">Medidas de la flor 50:</text>
+  <rect x="372" y="190" width="256" height="49" rx="8" fill="#eff6ff"/>
+  <text x="388" y="222" fill="#1e3a8a" font-family="Menlo, Consolas, monospace" font-size="18" font-weight="700">X[50] = [4.7, 1.4]</text>
+  <text x="372" y="268" fill="#475569" font-family="Arial, sans-serif" font-size="15">Especie correcta:</text>
+  <text x="372" y="297" fill="#0f172a" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="700">y[50] = 1</text>
+  <text x="484" y="297" fill="#92400e" font-family="Arial, sans-serif" font-size="16" font-weight="700">→ versicolor</text>
+  <text x="372" y="332" fill="#64748b" font-family="Arial, sans-serif" font-size="13">X = medidas · y = respuesta conocida</text>
+
+  <path d="M653 222 H671" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M664 216 L672 222 L664 228" fill="none" stroke="#64748b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="696" y="126" fill="#15803d" font-family="Arial, sans-serif" font-size="17" font-weight="700">3. Dibujamos un punto</text>
+  <line x1="728" y1="301" x2="935" y2="301" stroke="#475569" stroke-width="2"/>
+  <line x1="728" y1="301" x2="728" y2="164" stroke="#475569" stroke-width="2"/>
+  <path d="M930 296 L937 301 L930 306 M723 171 L728 163 L733 171" fill="none" stroke="#475569" stroke-width="2"/>
+  <line x1="865" y1="301" x2="865" y2="236" stroke="#f59e0b" stroke-dasharray="4 4"/>
+  <line x1="728" y1="236" x2="865" y2="236" stroke="#f59e0b" stroke-dasharray="4 4"/>
+  <circle cx="865" cy="236" r="10" fill="#f59e0b" stroke="#92400e" stroke-width="2"/>
+  <text x="821" y="217" fill="#92400e" font-family="Arial, sans-serif" font-size="14" font-weight="700">(4,7; 1,4)</text>
+  <text x="824" y="327" fill="#475569" font-family="Arial, sans-serif" font-size="13">longitud (cm)</text>
+  <text x="690" y="223" fill="#475569" font-family="Arial, sans-serif" font-size="13" transform="rotate(-90 690 223)">anchura (cm)</text>
+</svg>
