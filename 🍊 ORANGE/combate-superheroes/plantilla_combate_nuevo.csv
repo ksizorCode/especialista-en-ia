@@ -1,0 +1,8 @@
+﻿personaje_a,universo_a,personaje_b,universo_b,diferencia_fuerza,diferencia_velocidad,diferencia_resistencia,diferencia_inteligencia,diferencia_combate,diferencia_proyeccion_energia,diferencia_versatilidad,diferencia_debilidad,resultado
+Green Arrow,DC,Spider-Man,Marvel,-3,-4,-3,-1,0,-1,-1,0,B
+Cyborg,DC,Luke Cage,Marvel,0,2,-1,3,0,5,0,-1,A
+Shazam,DC,Iron Man,Marvel,3,2,2,-4,-1,0,-1,1,X
+Shazam,DC,Hulk,Marvel,0,2,0,1,0,3,-2,1,A
+Shazam,DC,Iron Man,Marvel,3,2,2,-4,-1,0,-1,1,X
+Shazam,DC,Captain Marvel,Marvel,1,0,1,-1,-1,-1,-1,0,X
+Captain Marvel,Marvel,Thanos,Marvel,-1,2,-1,-2,-1,0,-2,0,B

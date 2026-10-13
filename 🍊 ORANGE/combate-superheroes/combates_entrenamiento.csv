@@ -1,0 +1,221 @@
+﻿id_combate,personaje_a,universo_a,personaje_b,universo_b,diferencia_fuerza,diferencia_velocidad,diferencia_resistencia,diferencia_inteligencia,diferencia_combate,diferencia_proyeccion_energia,diferencia_versatilidad,diferencia_debilidad,resultado,origen_etiqueta
+1,Scarlet Witch,Marvel,Ant-Man,Marvel,1,1,1,1,-1,4,0,-1,B,sintetica_regla_didactica
+2,Black Canary,DC,Vision,Marvel,-5,-3,-5,-1,2,-3,0,-1,B,sintetica_regla_didactica
+3,Zatanna,DC,Black Widow,Marvel,2,1,1,0,-3,7,-2,-1,X,sintetica_regla_didactica
+4,Black Canary,DC,Loki,Marvel,-4,-3,-3,-2,1,-3,-1,1,B,sintetica_regla_didactica
+5,Raven,DC,Deadpool,Marvel,1,2,-1,2,-2,6,-2,-1,A,sintetica_regla_didactica
+6,Luke Cage,Marvel,Mister Fantastic,Marvel,3,0,3,-5,0,-2,0,1,A,sintetica_regla_didactica
+7,Shazam,DC,Starfire,DC,3,2,3,0,0,0,0,1,A,sintetica_regla_didactica
+8,Magneto,Marvel,Black Adam,DC,-3,-3,-3,2,-1,1,0,-1,B,sintetica_regla_didactica
+9,Nightwing,DC,Venom,Marvel,-5,-3,-4,3,2,-3,0,0,B,sintetica_regla_didactica
+10,Flash,DC,Hawkeye,Marvel,2,6,3,0,-1,0,1,0,A,sintetica_regla_didactica
+11,Cyborg,DC,Black Bolt,Marvel,-1,-2,-1,1,-1,-2,0,0,X,sintetica_regla_didactica
+12,Black Canary,DC,Magneto,Marvel,-4,-2,-3,-2,2,-4,-1,0,B,sintetica_regla_didactica
+13,Ant-Man,Marvel,Colossus,Marvel,-4,1,-4,3,0,2,-1,-1,B,sintetica_regla_didactica
+14,Superman,DC,Vision,Marvel,2,3,1,1,1,1,1,0,A,sintetica_regla_didactica
+15,Lex Luthor,DC,Moon Knight,Marvel,-1,-1,-1,3,-4,3,0,0,B,sintetica_regla_didactica
+16,Flash,DC,Shazam,DC,-5,1,-4,1,1,-5,2,-1,B,sintetica_regla_didactica
+17,Thor,Marvel,Groot,Marvel,3,4,2,4,2,6,2,1,A,sintetica_regla_didactica
+18,Batman,DC,Iron Man,Marvel,-4,-4,-4,0,2,-4,2,-1,B,sintetica_regla_didactica
+19,Ant-Man,Marvel,Black Adam,DC,-5,-3,-5,1,-1,-3,-2,-1,B,sintetica_regla_didactica
+20,Wasp,Marvel,Daredevil,Marvel,1,3,1,1,-3,4,-2,0,A,sintetica_regla_didactica
+21,Wolverine,Marvel,Loki,Marvel,-1,-2,1,-3,2,-6,1,2,B,sintetica_regla_didactica
+22,Scarlet Witch,Marvel,Vision,Marvel,-2,0,-3,1,-1,1,-1,-2,B,sintetica_regla_didactica
+23,Martian Manhunter,DC,Ant-Man,Marvel,4,2,4,0,1,3,2,0,A,sintetica_regla_didactica
+24,Nightwing,DC,Spider-Man,Marvel,-3,-4,-2,0,1,-2,-1,0,B,sintetica_regla_didactica
+25,Hawkeye,Marvel,Black Bolt,Marvel,-5,-4,-5,0,1,-6,0,0,B,sintetica_regla_didactica
+26,Raven,DC,Black Widow,Marvel,3,3,2,0,-3,7,-2,-1,X,sintetica_regla_didactica
+27,Spider-Man,Marvel,Colossus,Marvel,-3,3,-3,3,2,1,1,-1,B,sintetica_regla_didactica
+28,Joker,DC,Thor,Marvel,-8,-6,-8,0,-5,-7,-4,-3,B,sintetica_regla_didactica
+29,Green Lantern,DC,Harley Quinn,DC,4,3,5,2,0,8,1,0,A,sintetica_regla_didactica
+30,Luke Cage,Marvel,Black Adam,DC,-3,-5,-2,-2,-1,-6,-1,0,B,sintetica_regla_didactica
+31,Aquaman,DC,Black Adam,DC,-2,-2,-2,-1,0,-3,-1,-1,B,sintetica_regla_didactica
+32,Colossus,Marvel,Supergirl,DC,-1,-5,-1,-2,0,-5,0,0,B,sintetica_regla_didactica
+33,Black Widow,Marvel,Colossus,Marvel,-6,-1,-5,3,3,-1,1,-1,B,sintetica_regla_didactica
+34,Lex Luthor,DC,Harley Quinn,DC,0,-1,1,4,-2,4,1,-1,A,sintetica_regla_didactica
+35,Thor,Marvel,Black Bolt,Marvel,2,0,2,1,0,0,1,1,A,sintetica_regla_didactica
+36,Flash,DC,Thanos,Marvel,-5,3,-4,-2,-1,-6,-1,-1,B,sintetica_regla_didactica
+37,Magneto,Marvel,Venom,Marvel,-1,-1,-1,4,-1,4,1,0,B,sintetica_regla_didactica
+38,Hawkeye,Marvel,Wolverine,Marvel,-3,-1,-5,1,-1,1,-2,-1,B,sintetica_regla_didactica
+39,Green Arrow,DC,Black Panther,Marvel,-2,-1,-3,-2,-1,-1,-1,-1,B,sintetica_regla_didactica
+40,Hulk,Marvel,Scarlet Witch,Marvel,4,0,4,-4,1,-4,2,1,A,sintetica_regla_didactica
+41,Spider-Man,Marvel,Moon Knight,Marvel,2,4,1,1,0,2,1,1,A,sintetica_regla_didactica
+42,Captain Marvel,Marvel,Jean Grey,Marvel,4,2,4,-2,2,0,1,2,A,sintetica_regla_didactica
+43,Black Widow,Marvel,Doctor Strange,Marvel,-2,-2,-2,-2,3,-7,1,1,X,sintetica_regla_didactica
+44,Black Panther,Marvel,Magneto,Marvel,-2,-1,-1,0,3,-5,0,1,X,sintetica_regla_didactica
+45,Aquaman,DC,Doomsday,DC,-2,-1,-2,3,0,-1,-1,-1,B,sintetica_regla_didactica
+46,Spider-Man,Marvel,Luke Cage,Marvel,-1,4,-2,3,2,2,1,-1,B,sintetica_regla_didactica
+47,Doomsday,DC,Groot,Marvel,3,4,2,-1,2,3,2,1,A,sintetica_regla_didactica
+48,Martian Manhunter,DC,Wasp,Marvel,5,1,4,0,1,3,2,0,A,sintetica_regla_didactica
+49,Captain Marvel,Marvel,Supergirl,DC,-1,-1,-1,0,1,1,0,0,X,sintetica_regla_didactica
+50,Green Lantern,DC,Black Bolt,Marvel,-1,-1,0,1,-1,0,0,0,X,sintetica_regla_didactica
+51,Black Bolt,Marvel,Loki,Marvel,1,1,1,-2,0,1,-1,1,X,sintetica_regla_didactica
+52,Black Bolt,Marvel,Colossus,Marvel,-1,3,-1,2,1,6,0,-1,A,sintetica_regla_didactica
+53,Raven,DC,Colossus,Marvel,-3,2,-3,3,0,6,-1,-2,X,sintetica_regla_didactica
+54,Wonder Woman,DC,Captain Marvel,Marvel,0,-1,0,1,2,-3,1,0,B,sintetica_regla_didactica
+55,Iron Man,Marvel,Deadpool,Marvel,2,2,1,4,-1,5,-1,0,A,sintetica_regla_didactica
+56,Aquaman,DC,Lex Luthor,DC,5,4,4,-4,3,0,0,1,A,sintetica_regla_didactica
+57,Raven,DC,Captain America,Marvel,1,2,0,0,-3,7,-3,-2,B,sintetica_regla_didactica
+58,Captain Marvel,Marvel,Ant-Man,Marvel,4,3,4,-1,1,4,1,1,A,sintetica_regla_didactica
+59,Ant-Man,Marvel,Loki,Marvel,-2,-1,-2,-1,-1,-3,-2,1,B,sintetica_regla_didactica
+60,Groot,Marvel,Storm,Marvel,1,-3,2,-4,-1,-6,-1,0,B,sintetica_regla_didactica
+61,Scarlet Witch,Marvel,Groot,Marvel,-1,3,-2,5,0,6,0,-1,A,sintetica_regla_didactica
+62,Black Canary,DC,Hawkeye,Marvel,0,0,1,0,0,2,0,0,A,sintetica_regla_didactica
+63,Batman,DC,Black Bolt,Marvel,-5,-5,-4,3,2,-5,2,-1,B,sintetica_regla_didactica
+64,Captain America,Marvel,Magneto,Marvel,-2,-1,-1,-1,3,-7,1,1,X,sintetica_regla_didactica
+65,Thanos,Marvel,Harley Quinn,DC,7,3,7,3,2,8,3,1,A,sintetica_regla_didactica
+66,Joker,DC,Colossus,Marvel,-7,-3,-7,3,-4,-1,-3,-3,B,sintetica_regla_didactica
+67,Batman,DC,Shazam,DC,-7,-6,-6,4,3,-4,3,-2,B,sintetica_regla_didactica
+68,Superman,DC,Starfire,DC,3,3,3,3,1,1,2,1,A,sintetica_regla_didactica
+69,Joker,DC,Black Bolt,Marvel,-6,-6,-6,1,-5,-7,-3,-2,B,sintetica_regla_didactica
+70,Shazam,DC,Hawkeye,Marvel,7,5,7,-1,-2,5,-1,1,A,sintetica_regla_didactica
+71,Vision,Marvel,Storm,Marvel,2,0,3,0,0,-1,0,1,A,sintetica_regla_didactica
+72,Captain Marvel,Marvel,Daredevil,Marvel,6,5,5,0,-2,8,-1,1,A,sintetica_regla_didactica
+73,Black Panther,Marvel,Wasp,Marvel,1,-2,1,1,3,-1,2,1,A,sintetica_regla_didactica
+74,Cyborg,DC,Harley Quinn,DC,4,2,4,2,0,6,1,0,A,sintetica_regla_didactica
+75,Nightwing,DC,Wolverine,Marvel,-3,-1,-4,2,0,0,-2,-1,B,sintetica_regla_didactica
+76,Hawkeye,Marvel,Doctor Strange,Marvel,-2,-2,-3,-3,2,-6,0,1,B,sintetica_regla_didactica
+77,Wonder Woman,DC,Zatanna,DC,4,3,4,0,3,-3,2,2,A,sintetica_regla_didactica
+78,Nightwing,DC,Captain Marvel,Marvel,-6,-5,-5,1,2,-7,0,-1,B,sintetica_regla_didactica
+79,Shazam,DC,Jean Grey,Marvel,5,2,5,-3,1,-1,0,2,A,sintetica_regla_didactica
+80,Moon Knight,Marvel,Jean Grey,Marvel,-1,-3,0,-2,3,-7,1,0,B,sintetica_regla_didactica
+81,Ant-Man,Marvel,Venom,Marvel,-3,-1,-3,3,-1,0,-1,0,B,sintetica_regla_didactica
+82,Wasp,Marvel,Storm,Marvel,-2,0,-1,0,0,-4,-1,0,B,sintetica_regla_didactica
+83,Nightwing,DC,Mister Fantastic,Marvel,-1,0,-1,-2,3,-2,0,0,B,sintetica_regla_didactica
+84,Lex Luthor,DC,Spider-Man,Marvel,-3,-5,-2,2,-4,1,-1,-1,B,sintetica_regla_didactica
+85,Black Widow,Marvel,Magneto,Marvel,-4,-2,-3,-1,3,-7,0,0,B,sintetica_regla_didactica
+86,Starfire,DC,Venom,Marvel,-1,0,-1,1,-1,3,-1,0,X,sintetica_regla_didactica
+87,Green Arrow,DC,Captain America,Marvel,-2,-1,-3,-1,-1,1,-2,-1,B,sintetica_regla_didactica
+88,Green Arrow,DC,Wasp,Marvel,-1,-3,-2,-1,2,-2,1,0,X,sintetica_regla_didactica
+89,Lex Luthor,DC,Scarlet Witch,Marvel,-3,-4,-2,1,-1,-4,1,0,B,sintetica_regla_didactica
+90,Superman,DC,Iron Man,Marvel,3,3,2,-1,0,1,1,1,A,sintetica_regla_didactica
+91,Cyborg,DC,Thor,Marvel,-3,-2,-3,0,-1,-2,-1,-1,B,sintetica_regla_didactica
+92,Aquaman,DC,Captain Marvel,Marvel,-1,-2,-1,-1,0,-4,0,-1,B,sintetica_regla_didactica
+93,Batman,DC,Hulk,Marvel,-7,-4,-6,5,3,-1,1,-1,B,sintetica_regla_didactica
+94,Green Arrow,DC,Doomsday,DC,-7,-4,-7,4,1,-3,-1,-1,B,sintetica_regla_didactica
+95,Batman,DC,Martian Manhunter,DC,-6,-5,-5,2,2,-4,1,-1,B,sintetica_regla_didactica
+96,Superman,DC,Zatanna,DC,5,5,5,1,1,0,2,2,A,sintetica_regla_didactica
+97,Hulk,Marvel,Jean Grey,Marvel,5,0,5,-4,1,-4,2,1,A,sintetica_regla_didactica
+98,Black Widow,Marvel,Storm,Marvel,-3,-3,-2,0,3,-7,1,0,B,sintetica_regla_didactica
+99,Thor,Marvel,Captain America,Marvel,5,3,4,0,-2,7,-1,0,A,sintetica_regla_didactica
+100,Deadpool,Marvel,Groot,Marvel,-2,1,-1,2,3,0,2,0,A,sintetica_regla_didactica
+101,Superman,DC,Green Lantern,DC,3,3,2,1,1,0,1,1,A,sintetica_regla_didactica
+102,Lex Luthor,DC,Venom,Marvel,-5,-4,-4,5,-3,0,0,-1,B,sintetica_regla_didactica
+103,Hulk,Marvel,Black Panther,Marvel,5,2,4,-4,-3,1,0,-1,A,sintetica_regla_didactica
+104,Starfire,DC,Daredevil,Marvel,4,3,3,-1,-3,7,-2,0,A,sintetica_regla_didactica
+105,Green Arrow,DC,Scarlet Witch,Marvel,-3,-3,-3,-2,3,-6,1,1,B,sintetica_regla_didactica
+106,Raven,DC,Lex Luthor,DC,3,4,2,-2,2,4,-1,0,A,sintetica_regla_didactica
+107,Cyborg,DC,Mister Fantastic,Marvel,3,2,2,-2,0,3,0,0,A,sintetica_regla_didactica
+108,Cyborg,DC,Wasp,Marvel,3,-1,2,0,0,2,1,0,A,sintetica_regla_didactica
+109,Wolverine,Marvel,Black Adam,DC,-4,-4,-2,-1,2,-6,1,0,B,sintetica_regla_didactica
+110,Hulk,Marvel,Captain Marvel,Marvel,1,-2,1,-2,-1,-4,1,-1,B,sintetica_regla_didactica
+111,Black Widow,Marvel,Mister Fantastic,Marvel,-1,0,-1,-2,3,-2,1,0,X,sintetica_regla_didactica
+112,Joker,DC,Hawkeye,Marvel,-1,-2,-1,1,-6,-1,-3,-2,B,sintetica_regla_didactica
+113,Doctor Strange,Marvel,Scarlet Witch,Marvel,-1,-1,0,1,1,0,1,0,B,sintetica_regla_didactica
+114,Zatanna,DC,Scarlet Witch,Marvel,-1,-2,-1,-1,1,0,0,0,B,sintetica_regla_didactica
+115,Doctor Strange,Marvel,Colossus,Marvel,-4,1,-3,5,0,6,0,-2,A,sintetica_regla_didactica
+116,Hulk,Marvel,Moon Knight,Marvel,6,3,5,-2,-2,3,1,1,A,sintetica_regla_didactica
+117,Joker,DC,Ant-Man,Marvel,-3,-4,-3,0,-4,-3,-2,-2,B,sintetica_regla_didactica
+118,Starfire,DC,Lex Luthor,DC,4,4,3,-4,2,3,-1,1,A,sintetica_regla_didactica
+119,Batman,DC,Wonder Woman,DC,-6,-5,-5,2,0,-2,1,-2,B,sintetica_regla_didactica
+120,Iron Man,Marvel,Groot,Marvel,0,3,0,6,2,5,1,0,A,sintetica_regla_didactica
+121,Wolverine,Marvel,Black Bolt,Marvel,-2,-3,0,-1,2,-7,2,1,X,sintetica_regla_didactica
+122,Black Canary,DC,Doomsday,DC,-7,-4,-6,4,1,-1,-1,-1,B,sintetica_regla_didactica
+123,Iron Man,Marvel,Black Panther,Marvel,2,2,2,1,-2,4,-1,-1,A,sintetica_regla_didactica
+124,Black Widow,Marvel,Supergirl,DC,-7,-6,-6,1,3,-6,1,-1,B,sintetica_regla_didactica
+125,Hawkeye,Marvel,Harley Quinn,DC,0,0,0,1,2,2,1,0,A,sintetica_regla_didactica
+126,Martian Manhunter,DC,Doctor Strange,Marvel,4,2,3,-2,1,-1,1,1,A,sintetica_regla_didactica
+127,Martian Manhunter,DC,Supergirl,DC,-1,-2,-1,1,1,0,1,-1,A,sintetica_regla_didactica
+128,Loki,Marvel,Daredevil,Marvel,4,3,3,2,-2,7,0,-1,A,sintetica_regla_didactica
+129,Martian Manhunter,DC,Magneto,Marvel,2,2,2,-1,1,-1,0,0,A,sintetica_regla_didactica
+130,Green Arrow,DC,Captain Marvel,Marvel,-6,-5,-6,0,1,-6,0,-1,B,sintetica_regla_didactica
+131,Black Widow,Marvel,Wolverine,Marvel,-3,-1,-4,2,0,0,-1,-1,B,sintetica_regla_didactica
+132,Spider-Man,Marvel,Scarlet Witch,Marvel,0,1,0,-1,3,-5,2,1,A,sintetica_regla_didactica
+133,Shazam,DC,Black Adam,DC,0,0,0,-1,-1,0,-2,0,B,sintetica_regla_didactica
+134,Wolverine,Marvel,Daredevil,Marvel,3,1,4,-1,0,1,1,1,A,sintetica_regla_didactica
+135,Green Lantern,DC,Supergirl,DC,-3,-3,-2,1,0,1,0,-1,B,sintetica_regla_didactica
+136,Black Panther,Marvel,Groot,Marvel,-2,1,-2,5,4,1,2,1,A,sintetica_regla_didactica
+137,Doomsday,DC,Venom,Marvel,2,1,2,-2,0,1,1,1,X,sintetica_regla_didactica
+138,Moon Knight,Marvel,Harley Quinn,DC,1,0,2,1,2,1,1,-1,A,sintetica_regla_didactica
+139,Shazam,DC,Harley Quinn,DC,7,5,7,0,0,7,0,1,A,sintetica_regla_didactica
+140,Batman,DC,Groot,Marvel,-4,-1,-4,6,4,1,3,-1,B,sintetica_regla_didactica
+141,Flash,DC,Zatanna,DC,0,5,1,-1,1,-6,2,1,X,sintetica_regla_didactica
+142,Groot,Marvel,Colossus,Marvel,-2,-1,-1,-1,-1,0,-1,-1,B,sintetica_regla_didactica
+143,Superman,DC,Thor,Marvel,0,2,0,1,0,0,0,0,X,sintetica_regla_didactica
+144,Superman,DC,Loki,Marvel,3,3,3,0,0,1,0,2,A,sintetica_regla_didactica
+145,Lex Luthor,DC,Vision,Marvel,-5,-4,-5,2,-2,-3,0,-2,B,sintetica_regla_didactica
+146,Black Canary,DC,Moon Knight,Marvel,-1,0,-1,0,0,3,0,1,X,sintetica_regla_didactica
+147,Shazam,DC,Spider-Man,Marvel,4,1,4,-2,-2,4,-2,1,A,sintetica_regla_didactica
+148,Black Panther,Marvel,Jean Grey,Marvel,0,-2,1,0,4,-5,2,2,A,sintetica_regla_didactica
+149,Spider-Man,Marvel,Harley Quinn,DC,3,4,3,2,2,3,2,0,A,sintetica_regla_didactica
+150,Hawkeye,Marvel,Thanos,Marvel,-7,-3,-7,-2,0,-6,-2,-1,B,sintetica_regla_didactica
+151,Scarlet Witch,Marvel,Wolverine,Marvel,0,2,-2,3,-4,7,-3,-2,X,sintetica_regla_didactica
+152,Luke Cage,Marvel,Jean Grey,Marvel,2,-3,3,-4,1,-7,1,2,B,sintetica_regla_didactica
+153,Lex Luthor,DC,Wasp,Marvel,-1,-4,-1,2,-2,0,1,-1,B,sintetica_regla_didactica
+154,Black Widow,Marvel,Moon Knight,Marvel,-1,0,-1,1,1,0,1,1,B,sintetica_regla_didactica
+155,Doctor Strange,Marvel,Vision,Marvel,-3,-1,-3,2,0,1,0,-2,X,sintetica_regla_didactica
+156,Daredevil,Marvel,Black Adam,DC,-7,-5,-6,0,2,-7,0,-1,B,sintetica_regla_didactica
+157,Hawkeye,Marvel,Captain Marvel,Marvel,-6,-5,-6,0,1,-6,0,-1,B,sintetica_regla_didactica
+158,Doomsday,DC,Colossus,Marvel,1,3,1,-2,1,3,1,0,X,sintetica_regla_didactica
+159,Moon Knight,Marvel,Magneto,Marvel,-3,-2,-2,-2,2,-7,-1,-1,B,sintetica_regla_didactica
+160,Shazam,DC,Loki,Marvel,3,2,3,-3,-1,0,-2,2,A,sintetica_regla_didactica
+161,Aquaman,DC,Cyborg,DC,1,1,1,-2,1,-2,0,0,A,sintetica_regla_didactica
+162,Doomsday,DC,Storm,Marvel,4,1,4,-5,1,-3,1,1,A,sintetica_regla_didactica
+163,Batman,DC,Nightwing,DC,0,-1,0,2,0,2,2,-1,B,sintetica_regla_didactica
+164,Green Lantern,DC,Wasp,Marvel,3,0,3,0,0,4,1,0,A,sintetica_regla_didactica
+165,Captain America,Marvel,Black Bolt,Marvel,-3,-3,-2,1,2,-7,2,1,B,sintetica_regla_didactica
+166,Starfire,DC,Zatanna,DC,2,2,2,-2,0,-1,0,1,A,sintetica_regla_didactica
+167,Spider-Man,Marvel,Groot,Marvel,-1,4,-2,4,3,1,2,0,A,sintetica_regla_didactica
+168,Hulk,Marvel,Groot,Marvel,3,3,2,1,1,2,2,0,A,sintetica_regla_didactica
+169,Black Canary,DC,Black Bolt,Marvel,-5,-4,-4,0,1,-4,0,0,B,sintetica_regla_didactica
+170,Hulk,Marvel,Thanos,Marvel,0,0,0,-4,-2,-4,-1,-1,B,sintetica_regla_didactica
+171,Shazam,DC,Doctor Strange,Marvel,5,3,4,-4,0,-1,-1,2,A,sintetica_regla_didactica
+172,Loki,Marvel,Magneto,Marvel,0,1,0,0,1,-1,0,-1,X,sintetica_regla_didactica
+173,Thor,Marvel,Captain Marvel,Marvel,1,-1,1,1,0,0,1,0,A,sintetica_regla_didactica
+174,Zatanna,DC,Groot,Marvel,-2,1,-3,4,1,6,0,-1,B,sintetica_regla_didactica
+175,Starfire,DC,Black Panther,Marvel,2,2,1,-3,-3,4,-2,-1,A,sintetica_regla_didactica
+176,Shazam,DC,Mister Fantastic,Marvel,6,5,5,-4,0,4,-1,1,A,sintetica_regla_didactica
+177,Wonder Woman,DC,Thor,Marvel,-1,0,-1,0,2,-3,0,0,X,sintetica_regla_didactica
+178,Hawkeye,Marvel,Supergirl,DC,-7,-6,-7,0,2,-5,0,-1,B,sintetica_regla_didactica
+179,Ant-Man,Marvel,Groot,Marvel,-2,2,-3,4,1,2,0,0,X,sintetica_regla_didactica
+180,Black Canary,DC,Jean Grey,Marvel,-2,-3,-1,-2,3,-4,1,1,X,sintetica_regla_didactica
+181,Green Lantern,DC,Starfire,DC,0,0,1,2,0,1,1,0,X,sintetica_regla_didactica
+182,Cyborg,DC,Loki,Marvel,0,-1,0,-1,-1,-1,-1,1,A,sintetica_regla_didactica
+183,Doctor Strange,Marvel,Daredevil,Marvel,2,2,2,3,-3,8,-1,-1,A,sintetica_regla_didactica
+184,Green Arrow,DC,Black Canary,DC,0,0,-1,0,0,-2,0,0,X,sintetica_regla_didactica
+185,Flash,DC,Hulk,Marvel,-5,3,-4,2,1,-2,0,0,B,sintetica_regla_didactica
+186,Doomsday,DC,Thor,Marvel,0,0,0,-5,0,-3,0,0,B,sintetica_regla_didactica
+187,Captain America,Marvel,Vision,Marvel,-3,-2,-3,0,3,-6,2,0,B,sintetica_regla_didactica
+188,Batman,DC,Venom,Marvel,-5,-4,-4,5,2,-1,2,-1,X,sintetica_regla_didactica
+189,Black Bolt,Marvel,Moon Knight,Marvel,4,4,3,0,-1,7,0,1,A,sintetica_regla_didactica
+190,Superman,DC,Mister Fantastic,Marvel,6,6,5,-1,1,5,1,1,A,sintetica_regla_didactica
+191,Doomsday,DC,Scarlet Witch,Marvel,4,1,4,-6,2,-3,2,2,A,sintetica_regla_didactica
+192,Zatanna,DC,Jean Grey,Marvel,0,-2,0,-1,1,0,0,0,B,sintetica_regla_didactica
+193,Raven,DC,Wasp,Marvel,2,0,1,0,0,4,0,-1,A,sintetica_regla_didactica
+194,Martian Manhunter,DC,Hawkeye,Marvel,6,4,6,1,-1,5,1,0,A,sintetica_regla_didactica
+195,Captain Marvel,Marvel,Vision,Marvel,1,2,0,-1,1,1,0,0,X,sintetica_regla_didactica
+196,Joker,DC,Harley Quinn,DC,-1,-2,-1,2,-4,1,-2,-2,B,sintetica_regla_didactica
+197,Ant-Man,Marvel,Vision,Marvel,-3,-1,-4,0,0,-3,-1,-1,B,sintetica_regla_didactica
+198,Wonder Woman,DC,Martian Manhunter,DC,0,0,0,0,2,-2,0,1,A,sintetica_regla_didactica
+199,Iron Man,Marvel,Scarlet Witch,Marvel,1,0,2,1,2,-1,1,1,A,sintetica_regla_didactica
+200,Hulk,Marvel,Deadpool,Marvel,5,2,3,-1,-2,2,0,0,A,sintetica_regla_didactica
+201,Green Arrow,DC,Supergirl,DC,-7,-6,-7,0,2,-5,0,-1,B,sintetica_regla_didactica
+202,Cyborg,DC,Moon Knight,Marvel,3,2,2,1,-2,5,0,1,A,sintetica_regla_didactica
+203,Green Arrow,DC,Hawkeye,Marvel,0,0,0,0,0,0,0,0,A,sintetica_regla_didactica
+204,Superman,DC,Black Widow,Marvel,7,6,6,1,-2,7,0,1,A,sintetica_regla_didactica
+205,Doomsday,DC,Captain Marvel,Marvel,1,-1,1,-4,0,-3,1,0,A,sintetica_regla_didactica
+206,Spider-Man,Marvel,Captain Marvel,Marvel,-3,-1,-3,1,1,-5,1,-1,B,sintetica_regla_didactica
+207,Captain Marvel,Marvel,Luke Cage,Marvel,2,5,1,2,1,7,0,0,A,sintetica_regla_didactica
+208,Iron Man,Marvel,Vision,Marvel,-1,0,-1,2,1,0,0,-1,B,sintetica_regla_didactica
+209,Vision,Marvel,Loki,Marvel,1,0,2,-1,-1,0,-1,2,B,sintetica_regla_didactica
+210,Black Widow,Marvel,Jean Grey,Marvel,-2,-3,-1,-1,4,-7,2,1,B,sintetica_regla_didactica
+211,Black Canary,DC,Black Widow,Marvel,0,0,0,-1,-1,3,-1,0,B,sintetica_regla_didactica
+212,Batman,DC,Scarlet Witch,Marvel,-3,-4,-2,1,4,-5,3,0,B,sintetica_regla_didactica
+213,Wonder Woman,DC,Wasp,Marvel,5,1,4,0,3,1,2,1,A,sintetica_regla_didactica
+214,Spider-Man,Marvel,Supergirl,DC,-4,-2,-4,1,2,-4,1,-1,B,sintetica_regla_didactica
+215,Scarlet Witch,Marvel,Jean Grey,Marvel,1,0,1,0,0,0,0,0,A,sintetica_regla_didactica
+216,Hawkeye,Marvel,Groot,Marvel,-4,0,-5,3,3,0,1,0,B,sintetica_regla_didactica
+217,Captain America,Marvel,Black Panther,Marvel,0,0,0,-1,0,-2,1,0,B,sintetica_regla_didactica
+218,Iron Man,Marvel,Harley Quinn,DC,4,3,5,4,1,7,1,0,A,sintetica_regla_didactica
+219,Starfire,DC,Doomsday,DC,-3,-1,-3,3,-1,2,-2,-1,B,sintetica_regla_didactica
+220,Black Canary,DC,Captain Marvel,Marvel,-6,-5,-5,0,1,-4,0,-1,B,sintetica_regla_didactica

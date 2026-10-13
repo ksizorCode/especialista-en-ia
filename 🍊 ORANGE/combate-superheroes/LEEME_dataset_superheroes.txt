@@ -1,0 +1,17 @@
+DATASET DIDÁCTICO: COMBATES ENTRE PERSONAJES DE MARVEL Y DC
+
+Archivos:
+1) superheroes.csv
+   Una fila por personaje. Atributos en escala 1-10.
+2) combates_entrenamiento.csv
+   Enfrentamientos únicos con diferencias de atributos y etiqueta resultado (A, B o X).
+3) plantilla_combate_nuevo.csv
+   Plantilla para preparar un combate nuevo.
+
+IMPORTANTE:
+- Las puntuaciones de los personajes son estimaciones didácticas creadas para practicar.
+- Los resultados de combates_entrenamiento.csv son SINTÉTICOS: se generaron con una regla ponderada de atributos y un pequeño ruido aleatorio.
+- El modelo aprenderá principalmente esa regla; no debe interpretarse como una predicción objetiva o canónica de quién ganaría en los cómics.
+- Para una evaluación más rigurosa, sustituye o revisa las etiquetas con un criterio documentado y separa entrenamiento/prueba evitando que los mismos personajes aparezcan en ambos conjuntos si quieres medir generalización a personajes nuevos.
+- En Orange, usa resultado como Target. Para una primera prueba, selecciona las columnas de diferencias numéricas y prueba Árbol, Random Forest y KNN.
+- Para un combate nuevo, busca las estadísticas de ambos personajes en superheroes.csv y calcula las diferencias con el mismo orden A menos B (debilidad se invierte para que positivo favorezca a A). No incluyas resultado como variable de entrada.
