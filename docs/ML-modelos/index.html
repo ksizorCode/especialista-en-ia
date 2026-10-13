@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Interactiva y Visual de Modelos de Machine Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white" x-data="mlPlatform()">
+
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 py-4 px-6 shadow-xl">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">ML MasterGuide Pro</h1>
+                    <p class="text-xs text-slate-400">Plataforma de Referencia y Selector de Modelos para Data Scientists</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 bg-slate-800/80 p-1.5 rounded-xl border border-slate-700/60 text-xs font-medium">
+                <button @click="currentView = 'catalog'" :class="currentView === 'catalog' ? 'bg-blue-600 text-white shadow' : 'text-slate-300 hover:text-white'" class="px-4 py-2 rounded-lg transition-all flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+                    Catálogo Visual
+                </button>
+                <button @click="currentView = 'wizard'" :class="currentView === 'wizard' ? 'bg-blue-600 text-white shadow' : 'text-slate-300 hover:text-white'" class="px-4 py-2 rounded-lg transition-all flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    ¿Qué modelo elegir? (Asistente)
+                </button>
+                <button @click="currentView = 'matrix'" :class="currentView === 'matrix' ? 'bg-blue-600 text-white shadow' : 'text-slate-300 hover:text-white'" class="px-4 py-2 rounded-lg transition-all flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    Matriz Comparativa
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto p-6">
+
+        <!-- VIEW 1: CATALOGO VISUAL -->
+        <div x-show="currentView === 'catalog'" x-transition class="space-y-6">
+
+            <!-- Filtros Superiores y Búsqueda -->
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 flex flex-col md:flex-row gap-4 justify-between items-center shadow-lg">
+                <div class="flex flex-wrap gap-2 w-full md:w-auto">
+                    <button @click="selectedParadigm = 'all'" :class="selectedParadigm === 'all' ? 'bg-blue-600 text-white font-medium border-blue-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'" class="px-3.5 py-2 rounded-xl text-xs border transition-all">Todos los Paradigmas</button>
+                    <button @click="selectedParadigm = 'Supervisado - Clasificación'" :class="selectedParadigm === 'Supervisado - Clasificación' ? 'bg-blue-600 text-white font-medium border-blue-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'" class="px-3.5 py-2 rounded-xl text-xs border transition-all">Supervisado: Clasificación</button>
+                    <button @click="selectedParadigm = 'Supervisado - Regresión'" :class="selectedParadigm === 'Supervisado - Regresión' ? 'bg-blue-600 text-white font-medium border-blue-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'" class="px-3.5 py-2 rounded-xl text-xs border transition-all">Supervisado: Regresión</button>
+                    <button @click="selectedParadigm = 'No Supervisado'" :class="selectedParadigm === 'No Supervisado' ? 'bg-blue-600 text-white font-medium border-blue-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'" class="px-3.5 py-2 rounded-xl text-xs border transition-all">No Supervisado</button>
+                    <button @click="selectedParadigm = 'Deep Learning'" :class="selectedParadigm === 'Deep Learning' ? 'bg-blue-600 text-white font-medium border-blue-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'" class="px-3.5 py-2 rounded-xl text-xs border transition-all">Deep Learning</button>
+                </div>
+
+                <div class="w-full md:w-72 relative">
+                    <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <input type="text" x-model="searchQuery" placeholder="Buscar por nombre, caso o datos..." class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-xs text-slate-200 focus:outline-none focus:border-blue-500 transition-all">
+                </div>
+            </div>
+
+            <!-- Grid de Modelos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <template x-for="model in filteredModels" :key="model.name">
+                    <div class="bg-slate-900 border border-slate-800/80 rounded-2xl p-6 shadow-xl hover:border-blue-500/50 transition-all flex flex-col justify-between group">
+                        <div>
+                            <!-- Header Card -->
+                            <div class="flex justify-between items-start gap-2 mb-3">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md"
+                                          :class="{
+                                              'bg-blue-950 text-blue-300 border border-blue-800/60': model.paradigm.includes('Clasificación'),
+                                              'bg-amber-950 text-amber-300 border border-amber-800/60': model.paradigm.includes('Regresión'),
+                                              'bg-purple-950 text-purple-300 border border-purple-800/60': model.paradigm.includes('No Supervisado'),
+                                              'bg-emerald-950 text-emerald-300 border border-emerald-800/60': model.paradigm.includes('Deep Learning')
+                                          }"
+                                          x-text="model.paradigm"></span>
+                                    <h3 class="text-lg font-bold text-white mt-2 group-hover:text-blue-400 transition-colors" x-text="model.name"></h3>
+                                </div>
+                                <button @click="openDetail(model)" class="text-slate-400 hover:text-white p-2 rounded-lg bg-slate-800/50 hover:bg-slate-800 border border-slate-700/50 transition-all" title="Ver detalles y código">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </button>
+                            </div>
+
+                            <p class="text-slate-300 text-xs leading-relaxed mb-4" x-text="model.description"></p>
+
+                            <!-- Componentes Visuales del Uso -->
+                            <div class="space-y-2.5 mb-4 text-xs">
+                                <div class="bg-slate-950/60 p-2.5 rounded-xl border border-slate-800">
+                                    <span class="text-blue-400 font-bold block mb-0.5">🎯 Ideal para:</span>
+                                    <p class="text-slate-300" x-text="model.idealFor"></p>
+                                </div>
+                                <div class="bg-slate-950/60 p-2.5 rounded-xl border border-slate-800">
+                                    <span class="text-purple-400 font-bold block mb-0.5">📊 Datos Óptimos:</span>
+                                    <p class="text-slate-300" x-text="model.bestData"></p>
+                                </div>
+                                <div class="bg-slate-950/60 p-2.5 rounded-xl border border-slate-800">
+                                    <span class="text-emerald-400 font-bold block mb-0.5">🔮 Tipo de Predicción:</span>
+                                    <p class="text-slate-300" x-text="model.predictionType"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer con Ejemplo y Complejidad -->
+                        <div class="border-t border-slate-800 pt-3 mt-2 flex flex-col gap-2">
+                            <div class="flex justify-between items-center text-[11px]">
+                                <span class="text-slate-400">Interpretabilidad:</span>
+                                <div class="flex gap-1">
+                                    <template x-for="i in 5">
+                                        <div class="w-3 h-1.5 rounded-full" :class="i <= model.interpretability ? 'bg-blue-500' : 'bg-slate-800'"></div>
+                                    </template>
+                                </div>
+                            </div>
+                            <div class="text-xs bg-slate-950/80 p-2 rounded-lg border border-slate-800/80">
+                                <span class="font-semibold text-indigo-300 block text-[10px] uppercase mb-0.5">💡 Ejemplo Real:</span>
+                                <span class="text-slate-300 italic" x-text="model.example"></span>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <!-- VIEW 2: ASISTENTE INTERACTIVO / WIZARD DE SELECCIÓN -->
+        <div x-show="currentView === 'wizard'" x-transition class="max-w-3xl mx-auto space-y-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+                <div class="text-center mb-8">
+                    <span class="px-3 py-1 bg-blue-950 text-blue-300 border border-blue-800 rounded-full text-xs font-semibold">Asistente Inteligente</span>
+                    <h2 class="text-2xl font-bold text-white mt-3">¿Qué problema de Machine Learning quieres resolver?</h2>
+                    <p class="text-slate-400 text-sm mt-1">Responde 3 sencillas preguntas para descubrir el modelo ideal para tus datos.</p>
+                </div>
+
+                <!-- Paso 1 -->
+                <div x-show="wizardStep === 1" class="space-y-6">
+                    <h3 class="text-base font-semibold text-slate-200 border-b border-slate-800 pb-2">1. ¿Dispones de datos etiquetados (con la respuesta correcta)?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button @click="wizardData.labeled = true; wizardStep = 2" class="p-5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-blue-500 hover:bg-slate-800/40 text-left transition-all group">
+                            <div class="w-10 h-10 rounded-xl bg-blue-900/40 border border-blue-700/50 flex items-center justify-center text-blue-400 mb-3 group-hover:scale-110 transition-transform">✓</div>
+                            <h4 class="font-bold text-white text-base mb-1">Sí, tengo etiquetas</h4>
+                            <p class="text-xs text-slate-400">Sabemos qué queremos predecir (ej. historial de precios, spam o no).</p>
+                        </button>
+                        <button @click="wizardData.labeled = false; wizardData.targetType = 'clustering'; wizardStep = 4" class="p-5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-blue-500 hover:bg-slate-800/40 text-left transition-all group">
+                            <div class="w-10 h-10 rounded-xl bg-purple-900/40 border border-purple-700/50 flex items-center justify-center text-purple-400 mb-3 group-hover:scale-110 transition-transform">🔍</div>
+                            <h4 class="font-bold text-white text-base mb-1">No, no tengo etiquetas</h4>
+                            <p class="text-xs text-slate-400">Busco agrupar, segmentar o encontrar patrones ocultos sin guía.</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Paso 2 (Si es Supervisado) -->
+                <div x-show="wizardStep === 2" class="space-y-6">
+                    <h3 class="text-base font-semibold text-slate-200 border-b border-slate-800 pb-2">2. ¿Qué tipo de variable objetivo ($y$) deseas predecir?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button @click="wizardData.targetType = 'classification'; wizardStep = 3" class="p-5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-blue-500 hover:bg-slate-800/40 text-left transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-blue-900/40 border border-blue-700/50 flex items-center justify-center text-blue-400 mb-3">🏷️</div>
+                            <h4 class="font-bold text-white text-base mb-1">Una categoría o clase</h4>
+                            <p class="text-xs text-slate-400">Ej: Fraude / No fraude, Perro / Gato, Cliente VIP / Normal.</p>
+                        </button>
+                        <button @click="wizardData.targetType = 'regression'; wizardStep = 3" class="p-5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-blue-500 hover:bg-slate-800/40 text-left transition-all">
+                            <div class="w-10 h-10 rounded-xl bg-amber-900/40 border border-amber-700/50 flex items-center justify-center text-amber-400 mb-3">📈</div>
+                            <h4 class="font-bold text-white text-base mb-1">Un valor numérico continuo</h4>
+                            <p class="text-xs text-slate-400">Ej: Precio de una casa, Temperatura, Ventas mensuales.</p>
+                        </button>
+                    </div>
+                    <div class="pt-4">
+                        <button @click="wizardStep = 1" class="text-xs text-slate-400 hover:text-white flex items-center gap-1">← Volver atrás</button>
+                    </div>
+                </div>
+
+                <!-- Paso 3 (Si es Supervisado) -->
+                <div x-show="wizardStep === 3" class="space-y-6">
+                    <h3 class="text-base font-semibold text-slate-200 border-b border-slate-800 pb-2">3. ¿Qué volumen y complejidad tienen tus datos?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <button @click="wizardData.complexity = 'simple'; wizardStep = 4" class="p-4 rounded-2xl bg-slate-950 border border-slate-800 hover:border-blue-500 text-left transition-all">
+                            <h4 class="font-bold text-white text-sm mb-1">Tabulares sencillos</h4>
+                            <p class="text-[11px] text-slate-400">Pocas columnas, relaciones lineales o directas.</p>
+                        </button>
+                        <button @click="wizardData.complexity = 'tabular_complex'; wizardStep = 4" class="p-4 rounded-2xl bg-slate-950 border border-slate-800 hover:border-blue-500 text-left transition-all">
+                            <h4 class="font-bold text-white text-sm mb-1">Tabulares complejos / Gran ruido</h4>
+                            <p class="text-[11px] text-slate-400">Miles de filas, interacciones no lineales pesadas.</p>
+                        </button>
+                        <button @click="wizardData.complexity = 'unstructured'; wizardStep = 4" class="p-4 rounded-2xl bg-slate-950 border border-slate-800 hover:border-blue-500 text-left transition-all">
+                            <h4 class="font-bold text-white text-sm mb-1">No estructurados (Imágenes/Texto)</h4>
+                            <p class="text-[11px] text-slate-400">Big data multimedia o secuencias largas.</p>
+                        </button>
+                    </div>
+                    <div class="pt-4">
+                        <button @click="wizardStep = 2" class="text-xs text-slate-400 hover:text-white flex items-center gap-1">← Volver atrás</button>
+                    </div>
+                </div>
+
+                <!-- Paso 4: Resultados Recomendados -->
+                <div x-show="wizardStep === 4" class="space-y-6">
+                    <div class="bg-blue-950/40 border border-blue-800/80 p-6 rounded-2xl">
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-wider block mb-1">✨ Modelo Recomendado</span>
+                        <h3 class="text-2xl font-extrabold text-white mb-2" x-text="getRecommendation().name"></h3>
+                        <p class="text-sm text-slate-300 mb-4" x-text="getRecommendation().description"></p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                            <div>
+                                <span class="text-slate-400 font-semibold block mb-0.5">🎯 ¿Por qué es ideal aquí?</span>
+                                <p class="text-slate-200" x-text="getRecommendation().idealFor"></p>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 font-semibold block mb-0.5">🚀 Ejemplo práctico:</span>
+                                <p class="text-slate-200" x-text="getRecommendation().example"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-4">
+                        <button @click="resetWizard()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl text-xs transition-all">Reiniciar Asistente</button>
+                        <button @click="openDetail(getRecommendation()); currentView = 'catalog'" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-xs transition-all shadow-lg shadow-blue-600/30">Ver detalles completos del modelo →</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- VIEW 3: MATRIZ COMPARATIVA -->
+        <div x-show="currentView === 'matrix'" x-transition class="space-y-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+                <h2 class="text-xl font-bold text-white mb-2">Matriz de Selección de Modelos</h2>
+                <p class="text-slate-400 text-xs mb-6">Comparativa definitiva de todos los algoritmos según su tipo de tarea, complejidad y interpretabilidad.</p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-950 text-slate-400 uppercase tracking-wider border-b border-slate-800">
+                            <tr>
+                                <th class="p-3.5">Modelo</th>
+                                <th class="p-3.5">Paradigma</th>
+                                <th class="p-3.5">Tipo de Predicción</th>
+                                <th class="p-3.5">Datos Ideales</th>
+                                <th class="p-3.5">Interpretabilidad</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <template x-for="model in models" :key="model.name">
+                                <tr class="hover:bg-slate-800/50 transition-colors">
+                                    <td class="p-3.5 font-bold text-white flex items-center gap-2">
+                                        <button @click="openDetail(model); currentView = 'catalog'" class="text-blue-400 hover:underline" x-text="model.name"></button>
+                                    </td>
+                                    <td class="p-3.5">
+                                        <span class="px-2 py-0.5 rounded text-[10px] font-semibold"
+                                              :class="{
+                                                  'bg-blue-950 text-blue-300 border border-blue-800': model.paradigm.includes('Clasificación'),
+                                                  'bg-amber-950 text-amber-300 border border-amber-800': model.paradigm.includes('Regresión'),
+                                                  'bg-purple-950 text-purple-300 border border-purple-800': model.paradigm.includes('No Supervisado'),
+                                                  'bg-emerald-950 text-emerald-300 border border-emerald-800': model.paradigm.includes('Deep Learning')
+                                              }" x-text="model.paradigm"></span>
+                                    </td>
+                                    <td class="p-3.5 text-slate-300" x-text="model.predictionType"></td>
+                                    <td class="p-3.5 text-slate-300" x-text="model.bestData"></td>
+                                    <td class="p-3.5">
+                                        <div class="flex gap-1 items-center">
+                                            <template x-for="i in 5">
+                                                <div class="w-2.5 h-1.5 rounded-full" :class="i <= model.interpretability ? 'bg-blue-500' : 'bg-slate-800'"></div>
+                                            </template>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- MODAL DETALLE DE MODELO -->
+    <div x-show="activeModal" x-cloak class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
+        <template x-if="selectedModel">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-2xl w-full p-6 md:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+                <button @click="activeModal = false" class="absolute top-6 right-6 text-slate-400 hover:text-white p-2 rounded-xl bg-slate-800">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold"
+                          :class="{
+                              'bg-blue-950 text-blue-300 border border-blue-800': selectedModel.paradigm.includes('Clasificación'),
+                              'bg-amber-950 text-amber-300 border border-amber-800': selectedModel.paradigm.includes('Regresión'),
+                              'bg-purple-950 text-purple-300 border border-purple-800': selectedModel.paradigm.includes('No Supervisado'),
+                              'bg-emerald-950 text-emerald-300 border border-emerald-800': selectedModel.paradigm.includes('Deep Learning')
+                          }" x-text="selectedModel.paradigm"></span>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-2" x-text="selectedModel.name"></h2>
+                <p class="text-slate-300 text-sm mb-6 leading-relaxed" x-text="selectedModel.description"></p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-xs">
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-blue-400 font-bold block mb-1">🎯 Ideal para:</span>
+                        <p class="text-slate-300" x-text="selectedModel.idealFor"></p>
+                    </div>
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-purple-400 font-bold block mb-1">📊 Datos óptimos:</span>
+                        <p class="text-slate-300" x-text="selectedModel.bestData"></p>
+                    </div>
+                </div>
+
+                <div class="space-y-4 text-xs mb-6">
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-emerald-400 font-bold block mb-1">🔮 Tipo de Predicción:</span>
+                        <p class="text-slate-300" x-text="selectedModel.predictionType"></p>
+                    </div>
+                    <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-indigo-400 font-bold block mb-1">✨ Ejemplo Práctico en el Mundo Real:</span>
+                        <p class="text-slate-300 italic" x-text="selectedModel.example"></p>
+                    </div>
+                </div>
+
+                <div class="flex justify-end pt-2">
+                    <button @click="activeModal = false" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-xs transition-all">Cerrar Guía</button>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <footer class="bg-slate-900 border-t border-slate-800 text-center py-6 text-xs text-slate-500 mt-auto">
+        Guía Interactiva Avanzada de Machine Learning para Estudiantes y Profesionales · Desarrollado con tecnologías web modernas.
+    </footer>
+
+    <script>
+        function mlPlatform() {
+            return {
+                currentView: 'catalog',
+                selectedParadigm: 'all',
+                searchQuery: '',
+                activeModal: false,
+                selectedModel: null,
+                wizardStep: 1,
+                wizardData: {
+                    labeled: true,
+                    targetType: 'classification',
+                    complexity: 'simple'
+                },
+                models: [
+                    {
+                        name: 'Regresión Logística',
+                        paradigm: 'Supervisado - Clasificación',
+                        description: 'Modelo lineal basado en la función sigmoide para estimar la probabilidad de pertenencia a una clase binaria.',
+                        idealFor: 'Problemas de clasificación binaria con fronteras de decisión lineales y alta interpretabilidad.',
+                        bestData: 'Tabulares estructurados limpios con variables numéricas y categóricas codificadas.',
+                        predictionType: 'Probabilidad continua (0 a 1) y etiquetas discretas (0 o 1).',
+                        interpretability: 5,
+                        example: 'Detección de transacciones fraudulentas en tarjetas de crédito (¿Fraude o Legítimo?).'
+                    },
+                    {
+                        name: 'Regresión Lineal',
+                        paradigm: 'Supervisado - Regresión',
+                        description: 'Ajusta una línea o hiperplano óptimo minimizando el error cuadrático medio (MSE) entre variables.',
+                        idealFor: 'Predecir valores numéricos continuos cuando existe una relación directa causa-efecto.',
+                        bestData: 'Datos cuantitativos continuos con correlaciones lineales directas y sin outliers extremos.',
+                        predictionType: 'Valores numéricos continuos de punto flotante ($y \in \mathbb{R}$).',
+                        interpretability: 5,
+                        example: 'Predicción del precio de venta de inmuebles en función de los metros cuadrados y ubicación.'
+                    },
+                    {
+                        name: 'Árboles de Decisión (CART)',
+                        paradigm: 'Supervisado - Clasificación / Regresión',
+                        description: 'Estructura en diagrama de flujo basada en reglas de decisión condicionales extraídas de las características.',
+                        idealFor: 'Datos mixtos donde se requiere total transparencia visual y comprensión de reglas de negocio.',
+                        bestData: 'Datos tabulares mixtos (numéricos y categóricos) sin necesidad estricta de normalización.',
+                        predictionType: 'Categorías discretas o valores numéricos continuos.',
+                        interpretability: 5,
+                        example: 'Diagnóstico médico preliminar basado en síntomas, edad y análisis de sangre.'
+                    },
+                    {
+                        name: 'Random Forest',
+                        paradigm: 'Supervisado - Clasificación / Regresión',
+                        description: 'Conjunto (Ensemble) de múltiples árboles de decisión entrenados de forma paralela (Bagging) con votación mayoritaria.',
+                        idealFor: 'Maximizar la precisión predictiva en tablas generales evitando el sobreajuste.',
+                        bestData: 'Grandes conjuntos de datos tabulares con múltiples atributos o presencia de ruido moderado.',
+                        predictionType: 'Clases discretas robustas o valores numéricos continuos estables.',
+                        interpretability: 3,
+                        example: 'Predicción de abandono de clientes (Churn) en servicios de suscripción o telecomunicaciones.'
+                    },
+                    {
+                        name: 'XGBoost / Gradient Boosting',
+                        paradigm: 'Supervisado - Clasificación / Regresión',
+                        description: 'Algoritmo secuencial de boosting donde cada nuevo árbol corrige de forma inteligente los errores residuales previos.',
+                        idealFor: 'Competencias de ciencia de datos y máxima precisión en tablas complejas o estructuradas.',
+                        bestData: 'Datos tabulares densos o dispersos de tamaño medio a grande.',
+                        predictionType: 'Clasificación multiclase, binaria o regresión numérica de alta precisión.',
+                        interpretability: 2,
+                        example: 'Sistemas avanzados de recomendación de productos y modelado de riesgo crediticio bancario.'
+                    },
+                    {
+                        name: 'Support Vector Machines (SVM)',
+                        paradigm: 'Supervisado - Clasificación / Regresión',
+                        description: 'Encuentra el hiperplano óptimo que maximiza el margen de separación entre clases empleando funciones kernel.',
+                        idealFor: 'Espacios de características de alta dimensionalidad con muestras moderadas.',
+                        bestData: 'Datos numéricos normalizados con fronteras de separación claras.',
+                        predictionType: 'Clasificación estricta o regresión robusta frente a valores atípicos.',
+                        interpretability: 2,
+                        example: 'Clasificación automática de textos legales o reconocimiento óptico de caracteres (OCR).'
+                    },
+                    {
+                        name: 'K-Means Clustering',
+                        paradigm: 'No Supervisado - Agrupamiento',
+                        description: 'Agrupa observaciones en $K$ clústeres disjuntos minimizando la varianza intra-grupo respecto a sus centroides.',
+                        idealFor: 'Segmentación de audiencias y análisis exploratorio inicial sin etiquetas previas.',
+                        bestData: 'Datos cuantitativos numéricos con escalas normalizadas.',
+                        predictionType: 'Asignación de etiquetas de grupo discretas (Grupo 1, 2, 3...).',
+                        interpretability: 4,
+                        example: 'Segmentación de base de datos de compradores para campañas de marketing dirigidas.'
+                    },
+                    {
+                        name: 'Análisis de Componentes Principales (PCA)',
+                        paradigm: 'No Supervisado - Reducción Dimensional',
+                        description: 'Transforma variables correlacionadas en un conjunto menor de variables ortogonales llamadas componentes principales.',
+                        idealFor: 'Mitigar la maldición de la dimensionalidad y facilitar la visualización 2D/3D.',
+                        bestData: 'Datos numéricos multivariantes altamente correlacionados.',
+                        predictionType: 'Proyecciones de menor dimensión o características latentes comprimidas.',
+                        interpretability: 3,
+                        example: 'Compresión de imágenes o visualización de perfiles genéticos complejos.'
+                    },
+                    {
+                        name: 'Redes Neuronales (Deep Learning / MLP)',
+                        paradigm: 'Deep Learning',
+                        description: 'Capas sucesivas de neuronas artificiales interconectadas capaces de aproximar funciones no lineales complejas.',
+                        idealFor: 'Procesamiento masivo de datos no estructurados como imágenes, vídeo, audio y lenguaje natural.',
+                        bestData: 'Grandes volúmenes de datos densos, secuencias temporales o matrices multidimensionales.',
+                        predictionType: 'Clasificación compleja, generación de contenido, vectores latentes o secuencias.',
+                        interpretability: 1,
+                        example: 'Reconocimiento de peatones en vehículos autónomos y Modelos de Lenguaje (LLMs).'
+                    }
+                ],
+                get filteredModels() {
+                    return this.models.filter(m => {
+                        const matchesParadigm = this.selectedParadigm === 'all' || m.paradigm.includes(this.selectedParadigm);
+                        const matchesSearch = m.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+                                              m.description.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+                                              m.idealFor.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+                                              m.example.toLowerCase().includes(this.searchQuery.toLowerCase());
+                        return matchesParadigm && matchesSearch;
+                    });
+                },
+                openDetail(model) {
+                    this.selectedModel = model;
+                    this.activeModal = true;
+                },
+                getRecommendation() {
+                    if (!this.wizardData.labeled) {
+                        return this.models.find(m => m.name.includes('K-Means'));
+                    }
+                    if (this.wizardData.targetType === 'classification') {
+                        if (this.wizardData.complexity === 'simple') return this.models.find(m => m.name.includes('Regresión Logística'));
+                        if (this.wizardData.complexity === 'tabular_complex') return this.models.find(m => m.name.includes('XGBoost'));
+                        return this.models.find(m => m.name.includes('Redes Neuronales'));
+                    } else {
+                        if (this.wizardData.complexity === 'simple') return this.models.find(m => m.name.includes('Regresión Lineal'));
+                        return this.models.find(m => m.name.includes('Random Forest'));
+                    }
+                },
+                resetWizard() {
+                    this.wizardStep = 1;
+                    this.wizardData = { labeled: true, targetType: 'classification', complexity: 'simple' };
+                }
+            }
+        }
+    </script>
+</body>
+</html>
