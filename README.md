@@ -1,7 +1,7 @@
 # 🤖 Especialista en iA
 Curso de Dicampus la calzada
 
-https://ksizorcode.github.io/especialista-en-ia/
+Github Pages: https://ksizorcode.github.io/especialista-en-ia/
 
 
 |ico| Qué es                | enlace               |
