@@ -29,7 +29,7 @@ feb = np.array([34, 21, 32, 17])            #puntos de Febrero
 mal = np.array([-134,-121,-132,-117])       #mal comportamiento
 
 
-# MOSTRAR DATOS Versión con variables intermedias
+# OPCION 1. MOSTRAR DATOS Versión con variables intermedias
 print(f"Casas: {casas}")
 print(f"Puntos  previos: {iniciales}")
 totalEnero = iniciales + ene
@@ -40,14 +40,14 @@ puntosFinales = totalFebrero + mal
 print(f"Puntos  Finales: {puntosFinales}")
 print("----")
 
-# MOSTRAR DATOS Versión con suma directa
+# OPCION 2. MOSTRAR DATOS Versión con suma directa
 print(f"Puntos  previos: {iniciales}")
 print(f"Puntos en Enero: {iniciales+ene}")
 print(f"Puntos  Febrero: {iniciales+ene+feb}")
 print(f"Puntos  Finales: {iniciales+ene+feb+mal}")
 print("----")
 
-# MOSTRAR DATOS Versión con bucle
+# OPCION 3. MOSTRAR DATOS Versión con bucle
 
 listas = [iniciales, ene, feb, mal]   # las listas con las que vamos a trabajar
 puntos = np.empty(len(casas))         # array vacio con 4 espacios: [ , , , ]
@@ -56,6 +56,13 @@ mensajes=["Puntos  previos", "Puntos en Enero", "Puntos  Febrero", "Puntos  Fina
 for i in range(len(listas)):
     puntos += listas[i]
     print(f"{mensajes[i]}: {puntos}")
+
+
+# Quine ha ganado?
+# al final de la temporada Griffindor es el ganador con 355:  [355 337 353 342]
+ganador = np.argmax(puntos)  #almacenamos la posición del array donde se encuentra el valor máximo [0]
+
+print(f"🏆La casa que ha ganado es: {casas[ganador]}") # muestra el valor del array casas en la posición 0, que es Griffindor
 ```
 
 </details>
