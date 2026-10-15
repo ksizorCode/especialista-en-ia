@@ -4,12 +4,16 @@
 ```python
 import numpy as np
 
-a = 1.34343434;
+#Variables con las que vamos a trabajar
+a = 1.78343434;
 b = 5
 
 
-entero=a.astype(ing). #fuerza el entero
-entero_redondeado= np.round(a).astype(ing)
+#fuerza el entero
+entero=a.astype(ing). # 1
+
+# Redondea
+entero_redondeado= np.round(a).astype(ing). #2
 
 
 ```
