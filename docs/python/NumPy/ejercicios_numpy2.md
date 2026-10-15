@@ -1,9 +1,9 @@
-# Ejercicios Frikys con Numpy
+# 🚀 Ejercicios Frikys con Numpy
 
-## Bloque 1: El Sombrero Seleccionador y Creación de Arrays Básicos
+## ▶️ Bloque 1: El Sombrero Seleccionador y Creación de Arrays Básicos
 
 
-### Reto 001: Los puntos de las Casas de Hogwarts
+### 📦 Reto 001: Los puntos de las Casas de Hogwarts
 
 Estás en la Gran Sala y el profesor Dumbledore necesita registrar los puntos actuales de las cuatro casas (Gryffindor, Slytherin, Ravenclaw y Hufflepuff). Crea un array de NumPy con los siguientes puntos iniciales: [450, 420, 430, 410]. Muestra el array por pantalla y comprueba su tipo de datos (dtype).
 
@@ -17,7 +17,7 @@ Señala automáticamente cual es la casa ganadora de la compa de la casa.
 
 ---
 
-### Reto 002: El inventario de varitas en Ollivanders
+### 📦 Reto 002: El inventario de varitas en Ollivanders
 
 Mr. Ollivander quiere organizar su stock de varitas mágicas hechas con diferentes núcleos (Pluma de Fénix, Pelo de Unicornio, Nervio de Dragón). Crea un array unidimensional usando np.array() con el número de varitas de cada tipo: [12, 25, 8, 30]. Multiplica todo el inventario por 2 debido a un cargamento imprevisto que acaba de llegar de Diagon Alley.
 
@@ -27,7 +27,7 @@ Mr. Ollivander quiere organizar su stock de varitas mágicas hechas con diferent
 
 
 
-### Reto 003: Creando el mapa de El Señor de los Anillos (Ceros y Unos)
+### 📦 Reto 003: Creando el mapa de El Señor de los Anillos (Ceros y Unos)
 
 Para planificar el avance de la Comunidad del Anillo, necesitas una cuadrícula base de terreno inexplorado de tamaño 3x4 llena de ceros (representando terreno llano), y otra matriz idéntica de tamaño 2x3 llena de unos (representando murallas de Mordor). Utiliza las funciones np.zeros() y np.ones().
 
@@ -85,7 +85,7 @@ pront(binarios_aleatorios)
 ```
 
 
-### Reto 004: Crea un mapa aleatorio
+### 📦 Reto 004: Crea un mapa aleatorio
 Crea un mapa aleatorio de por ejemplo 20x20 donde utilices un array multidimensional con los que representarás los elementos del mapa a partir de referencias numéricas del 0 al 5. Luego reempleza cada coordenada numérica por un emoticono.
 
 ```python
@@ -122,17 +122,17 @@ for fila in matriz_emojis:
 
 ---
 
-### RETO 004: La secuencia numérica del Doctor Who
+### 📦 RETO 004: La secuencia numérica del Doctor Who
 El TARDIS del Doctor Who viaja a través del tiempo mediante secuencias exactas. Utiliza np.arange() para generar un array con los números del 1 al 20 (incluyendo el 20) de 2 en 2, representando los saltos temporales del Doctor.
 
 ---
 
-### RETO 005: Los niveles de poder de los Pokémon Legendarios
+### 📦 RETO 005: Los niveles de poder de los Pokémon Legendarios
  Genera un array utilizando np.linspace() que contenga exactamente 5 valores repartidos de forma equitativa en el rango de poder del 100 al 500 para evaluar las estadísticas base de un Pokémon legendario.
 
 
 ---
-### RETO 006: El Sombrero Seleccionador y la asignación de casa aleatoria
+### 📦 RETO 006: El Sombrero Seleccionador y la asignación de casa aleatoria
 Estás programando la ceremonia de bienvenida de Hogwarts en Python.
 Tienes un array con los nombres de las cuatro casas: `casas = np.array(['Gryffindor', 'Slytherin', 'Ravenclaw', 'Hufflepuff'])`. Imagina que entran 15 nuevos alumnos de primer año. Utiliza `np.random.choice()` para simular que el Sombrero Seleccionador elige de forma completamente aleatoria (con repetición) una casa para cada uno de los 15 alumnos. Muestra el resultado de la asignación.
 
@@ -146,7 +146,7 @@ alumnos_asignados = np.random.choice(casas, size=5)
 print("Asignación del Sombrero Seleccionador:", alumnos_asignados)
 -->
 
-### RETO 007: Operación de espionaje y códigos de acceso aleatorios
+### 📦 RETO 007: Operación de espionaje y códigos de acceso aleatorios
 James Bond estás ayudando a Q a descifrar los códigos de seguridad de una base enemiga de SPECTRE. El sistema genera 5 códigos de acceso aleatorios de 4 dígitos cada uno (números enteros entre el 0 y el 9).
 
 Utiliza np.random.randint() para generar una matriz bidimensional de tamaño (5, 4) que represente estos 5 códigos de espionaje.
@@ -169,7 +169,7 @@ print(f"[Q-Branch Report] Dígito más bajo detectado: {digito_minimo}")
 -->
 
 
-### RETO 008: ¡Rayo al Delorean! Viaje temporal estocástico
+### 📦 RETO 008: ¡Rayo al Delorean! Viaje temporal estocástico
 
  Un rayo impacta de lleno en el condensador de fluzo del DeLorean. El sistema de navegación temporal falla y selecciona al azar un año del siglo XXI entre el 1800 y el 2015, y un mes aleatorio entre el 1 y el 12 y un día aleatorio entre 1 y 30. Utiliza np.random.randint() para generar un array que contenga 3 destinos temporales aleatorios (combinando años y meses y día al azar).
 
@@ -184,9 +184,9 @@ meses = np.random.randint(1, 13, size=3)
 print("Años de destino:", anios)
 print("Meses de destino:", meses)
 -->
+---
 
-
-### RETO 009: La lotería de los magos (Sorteo de Euromillones / Primitiva)
+### 📦 RETO 009: La lotería de los magos (Sorteo de Euromillones / Primitiva)
 Quieres probar suerte en la Lotería Mágica. Un boleto clásico requiere seleccionar 5 números aleatorios únicos en el rango del 1 al 50 (sin que se repitan). Utiliza la función np.random.choice() con el parámetro replace=False para generar la combinación ganadora de tu boleto y ordénala de menor a mayor con np.sort().
 
 <!--
@@ -199,7 +199,8 @@ numeros_ordenados = np.sort(numeros_loteria)
 print("Tus números de la suerte para la Lotería Mágica:", numeros_ordenados)
 -->
 
-### RETO 010: Echando la Quiniela Galáctica (1X2)
+---
+### 📦 RETO 010: Echando la Quiniela Galáctica (1X2)
  Vas a rellenar una quiniela de 14 partidos para la liga intergaláctica de Quidditch/Fútbol. Los resultados posibles para cada partido son 1 (gana local), X (empate) o 2 (gana visitante). Crea un array de NumPy que contenga las opciones ['1', 'X', '2'] y utiliza np.random.choice() para generar automáticamente los resultados aleatorios de los 14 partidos de la jornada.
 
  <!--
