@@ -15,6 +15,8 @@ Muestra la evolución de las puntuaciones por meses y el resultado final
 
 Señala automáticamente cual es la casa ganadora de la compa de la casa.
 
+<details>
+<summary>Ejercicio Resuelto</summary>
 
 ```python
 # DATOS
@@ -55,6 +57,10 @@ for i in range(len(listas)):
     puntos += listas[i]
     print(f"{mensajes[i]}: {puntos}")
 ```
+
+</details>
+
+
 
 ---
 
