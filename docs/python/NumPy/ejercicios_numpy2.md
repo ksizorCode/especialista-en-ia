@@ -213,3 +213,5 @@ print("Resultados de la Quiniela Galáctica:")
 for i, resultado in enumerate(quiniela, start=1):
     print(f"Partido {i}: {resultado}")
     -->
+
+    ---
