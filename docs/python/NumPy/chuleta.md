@@ -26,3 +26,9 @@
 - NumPy puede aplicar *broadcasting* cuando las dimensiones son compatibles; verifica que sea la operación que pretendes.
 - Usa operaciones vectorizadas y `axis` antes de escribir bucles.
 - Los cortes básicos pueden ser vistas del arreglo original; usa `.copy()` si necesitas una copia independiente.
+
+
+
+---
+
+
