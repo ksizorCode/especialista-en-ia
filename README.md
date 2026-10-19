@@ -4,10 +4,12 @@ Curso de Dicampus la calzada
 
 ⚽ OBJETIVO ANALISTA ------------------------------
 
-- Streaming en Directo: https://streamyard.com/watch/haK9fsUeZ8kj
-- 7 Casos de Uso de Power BI en Fútbol Profesional [Ejemplos Reales] ⚽️📊 : https://www.youtube.com/watch?v=bkG4K4hwxB4&t=338s
-- Dashboard de datos con PowerBi: https://app.powerbi.com/view?r=eyJrIjoiYzE4MWViMGYtMzQ5MS00NzlkLWFjZTgtNTA5NjI0ODFiNmM4IiwidCI6ImQwYmFmMDEyLTM2M2UtNGEwOS04NDQ0LTgxMDI3YTZmNWVhYyIsImMiOjl9
-- Web: https://formacion.objetivoanalista.com/taller-datos-futbol/
+| Qué                                       | Link                                                     |
+|-------------------------------------------|----------------------------------------------------------|
+| Streaming en Directo                      | https://streamyard.com/watch/haK9fsUeZ8kj                |
+| Dashboard de datos con PowerBi:           | https://app.powerbi.com/view?r=eyJrIjoiYzE4MWViMGYtMzQ5MS00NzlkLWFjZTgtNTA5NjI0ODFiNmM4IiwidCI6ImQwYmFmMDEyLTM2M2UtNGEwOS04NDQ0LTgxMDI3YTZmNWVhYyIsImMiOjl9
+| 7 Casos de Uso de Power BI en Fútbol Profesional [Ejemplos Reales] ⚽️📊 | https://www.youtube.com/watch?v=bkG4K4hwxB4&t=338s
+| Web | https://formacion.objetivoanalista.com/taller-datos-futbol/|
 
 
 
