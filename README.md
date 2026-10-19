@@ -24,7 +24,7 @@ Curso de Dicampus la calzada
 |📂| Drive Google Colab     | https://drive.google.com/drive/folders/1QLU51ySgYSNvhi0GE80ocUDfrlXvQNQo?usp=drive_link |
 |🚀| Github Pages     | https://ksizorcode.github.io/especialista-en-ia/ |
 
-## github de Alumnos del curso
+## 🧑‍🎓 github de Alumnos del curso
 
 | emoji | nombre            | github                                                |
 |-------|-------------------|-------------------------------------------------------|
@@ -37,7 +37,7 @@ Curso de Dicampus la calzada
 |       | Yeray             | https://github.com/yeray18                            |
 
 
-## Programillas
+## 🖱️ Programillas
 
 | Programa                     | ¿Qué hace?                                                               | URL               |
 |:-----------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------:|
