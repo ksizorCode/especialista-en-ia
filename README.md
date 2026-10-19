@@ -13,6 +13,7 @@ Curso de Dicampus la calzada
 | Cómo instalar PowerBi             | https://www.youtube.com/watch?v=M1dyitDoz7s                    |
 | FBRef                             | https://fbref.com/en/squads/bb9efd50/Sporting-Gijon-Stats      |
 | Transfer Mark                     | https://www.transfermarkt.es/                                  |
+| Web Curso                         | https://objetivoanalista.com/datos360/                         |
 
 
 ## 👨‍🏫 Cosas de Clase
