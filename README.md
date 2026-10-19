@@ -1,7 +1,7 @@
 # 🤖 Especialista en iA
 Curso de Dicampus la calzada
 
-Curso Python y PowerBi con datos de Futbol: https://streamyard.com/watch/haK9fsUeZ8kj
+Curso Python y PowerBi con datos de Futbol [balon](https://streamyard.com/watch/haK9fsUeZ8kj): https://streamyard.com/watch/haK9fsUeZ8kj
 
 
 |ico| Qué es                | enlace               |
