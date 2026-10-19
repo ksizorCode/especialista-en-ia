@@ -4,12 +4,14 @@ Curso de Dicampus la calzada
 
 ## ⚽ OBJETIVO ANALISTA 
 
-| Qué                               | Link                                                     |
-|-----------------------------------|----------------------------------------------------------|
-| Streaming en Directo              | https://streamyard.com/watch/haK9fsUeZ8kj                |
+| Qué                               | Link                                                           |
+|-----------------------------------|----------------------------------------------------------------|
+| Streaming en Directo              | https://streamyard.com/watch/haK9fsUeZ8kj                      |
 | Dashboard de datos con PowerBi:   | [Ver Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYzE4MWViMGYtMzQ5MS00NzlkLWFjZTgtNTA5NjI0ODFiNmM4IiwidCI6ImQwYmFmMDEyLTM2M2UtNGEwOS04NDQ0LTgxMDI3YTZmNWVhYyIsImMiOjl9)
-| 7 Casos de Uso de Power BI        | https://www.youtube.com/watch?v=bkG4K4hwxB4&t=338s
-| Web                               | https://formacion.objetivoanalista.com/taller-datos-futbol/|
+| 7 Casos de Uso de Power BI        | https://www.youtube.com/watch?v=bkG4K4hwxB4&t=338s             |
+| Web                               | https://formacion.objetivoanalista.com/taller-datos-futbol/    |
+| Cómo instalar PowerBi             | https://www.youtube.com/watch?v=M1dyitDoz7s                    |
+| FBRef                             | https://fbref.com/en/squads/bb9efd50/Sporting-Gijon-Stats      |
 
 
 
