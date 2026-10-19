@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NumPy · Cheat sheet A4 para imprimir</title>
+<style>
+:root{--ink:#172033;--muted:#657084;--paper:#f7f9fc;--card:#fff;--line:#e2e8f0;--blue:#3867d6;--blue-soft:#edf3ff;--green:#16845b;--green-soft:#eaf9f2;--orange:#c56b16;--orange-soft:#fff5e8;--purple:#7650b8;--purple-soft:#f4efff;--pink:#c14372;--pink-soft:#fff0f5;--shadow:0 12px 30px rgba(20,32,58,.08)}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:64px max(24px,calc((100% - 1180px)/2)) 46px;color:#fff;background:linear-gradient(135deg,#172a5d,#3867d6 58%,#46a5d9)}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:800;opacity:.8}
+h1{margin:8px 0 10px;max-width:780px;font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.03;letter-spacing:-.05em}.lead{max-width:720px;margin:0;font-size:1.12rem;opacity:.9}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:28px 0 18px}.toolbar span{color:var(--muted);font-size:.9rem;margin-right:5px}
+.filter{cursor:pointer;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);padding:8px 14px;font-weight:700}.filter:hover,.filter.active{color:#fff;background:var(--blue);border-color:var(--blue)}
+.tip{background:#fff9df;border:1px solid #f0dd93;border-radius:16px;padding:15px 18px;margin-bottom:32px}.tip strong{color:#8a6111}
+section{margin:42px 0 56px;scroll-margin-top:20px}.section-title{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}h2{margin:0;font-size:1.75rem;letter-spacing:-.03em}.section-title p{margin:0;color:var(--muted)}
+.section-label{display:inline-block;padding:4px 9px;border-radius:7px;font-weight:800;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+.blue .section-label{color:var(--blue);background:var(--blue-soft)}.green .section-label{color:var(--green);background:var(--green-soft)}.orange .section-label{color:var(--orange);background:var(--orange-soft)}.purple .section-label{color:var(--purple);background:var(--purple-soft)}.pink .section-label{color:var(--pink);background:var(--pink-soft)}
+.table-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}table{width:100%;border-collapse:collapse}th{padding:13px 16px;text-align:left;color:var(--muted);background:#f8fafc;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}td{padding:14px 16px;vertical-align:top;border-top:1px solid var(--line)}td:nth-child(1){width:42%}td:nth-child(2){width:28%;color:#39455a}td:nth-child(3){color:var(--muted)}
+code,pre{font-family:"JetBrains Mono","Cascadia Code",Consolas,monospace}td code{color:#1d4ed8;font-size:.91rem;white-space:pre-wrap}.codebox{position:relative;margin-top:18px;color:#e6edf7;background:#172033;border:1px solid #2b3954;border-radius:14px;overflow:auto}.codebox pre{margin:0;padding:22px 18px;min-width:500px;font-size:.9rem;line-height:1.7}.copy{position:absolute;z-index:1;top:9px;right:9px;border:1px solid #53627c;border-radius:7px;padding:5px 9px;background:#263550;color:#fff;cursor:pointer;font-weight:700}.copy:hover{background:var(--blue)}.comment{color:#8b9bb5}.note{margin:10px 0 0;color:var(--muted);font-size:.92rem}footer{margin-top:70px;padding:30px 0 55px;border-top:1px solid var(--line);color:var(--muted);text-align:center}.hidden{display:none}
+@media(max-width:700px){header{padding-top:40px}.wrap{width:min(100% - 24px,1180px)}.section-title{display:block}.section-title p{margin-top:5px}.table-card{overflow-x:auto}table{min-width:670px}}@media print{.toolbar,.copy{display:none}body{background:#fff}.table-card{box-shadow:none}section{break-inside:avoid}}
+
+/* Versión de impresión A4 */
+@page{size:A4 portrait;margin:14mm 13mm 16mm}
+html,body{background:#fff!important}
+body{font-size:10pt;line-height:1.35}
+header{padding:10mm 0 8mm;color:#111;background:#fff;border-bottom:2px solid #111}
+.wrap{width:100%;max-width:none}
+.eyebrow{color:#444;font-size:8pt}
+h1{margin:3mm 0 2mm;color:#111;font-size:28pt;line-height:1}
+.lead{max-width:none;color:#333;font-size:10pt}
+.tip{margin:5mm 0 7mm;padding:3mm 4mm;background:#fff;border:1px solid #999;border-radius:0;font-size:9pt}
+section{margin:0 0 8mm;padding-top:0;break-inside:avoid;page-break-inside:avoid}
+.section-title{gap:7px;margin-bottom:3mm}
+h2{font-size:16pt}
+.section-title p{font-size:9pt}
+.section-label{padding:2px 5px;font-size:7pt;border:1px solid currentColor}
+.table-card{box-shadow:none;border:1px solid #777;border-radius:0;overflow:visible}
+table{font-size:8.5pt}
+th{padding:5px 6px;color:#111;background:#eee;border-bottom:1px solid #777;font-size:7pt}
+td{padding:5px 6px;border-top:1px solid #bbb}
+td:nth-child(1){width:40%}td:nth-child(2){width:29%}
+td code{font-size:8pt}
+.codebox{margin-top:3mm;color:#111;background:#f5f5f5;border:1px solid #777;border-radius:0;overflow:visible}
+.codebox pre{min-width:0;padding:3mm 4mm;font-size:8pt;line-height:1.4;white-space:pre-wrap}
+.comment{color:#555}.kw{color:#7a2500}.str{color:#165b2a}
+.note{margin-top:2mm;font-size:8.5pt}
+footer{margin-top:3mm;padding:4mm 0 0;border-top:1px solid #777;font-size:8pt}
+@media print{section:nth-of-type(1){page-break-after:always}section:nth-of-type(2){page-break-after:always}section:nth-of-type(3){page-break-after:always}section:nth-of-type(4){page-break-after:always}section:nth-of-type(5){page-break-after:always}.tip{break-inside:avoid}}
+
+.example-caption{margin-top:12px;color:#3867d6;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+/* Agrupación suave por color, pensada para imprimir */
+section{border-left:5px solid #cbd5e1;padding-left:10px}
+.blue{border-left-color:#8eb3f5}.green{border-left-color:#8bcbb0}.orange{border-left-color:#f0bd7d}.purple{border-left-color:#b8a1e2}.pink{border-left-color:#e4a2bb}
+.blue .table-card th{background:#edf3ff}.green .table-card th{background:#eef9f4}.orange .table-card th{background:#fff5e8}.purple .table-card th{background:#f5f1ff}.pink .table-card th{background:#fff1f6}
+.blue .example-caption{color:#2f5ebd}.green .example-caption{color:#167552}.orange .example-caption{color:#a65b13}.purple .example-caption{color:#6844a2}.pink .example-caption{color:#a43763}
+@media print{.example-caption{margin-top:3mm;color:#222!important}.blue .table-card th,.green .table-card th,.orange .table-card th,.purple .table-card th,.pink .table-card th{background:#f1f1f1}}
+.blue .table-card th{background:#edf3ff}.blue section{border-left-color:#8eb3f5}</style>
+</head>
+<body>
+<header><div class="wrap"><div class="eyebrow">Python · Google Colab · NumPy</div><h1>La chuleta de NumPy que crece contigo</h1><p class="lead">Ejemplos cortos, progresivos y listos para copiar. Empieza creando arrays y termina filtrando, transformando y analizando datos.</p></div></header>
+<main class="wrap">
+<div class="tip"><strong>Cómo usarla:</strong> copia el bloque de ejemplo en una celda de Colab y ejecútalo de arriba abajo. En NumPy, los índices empiezan en <code>0</code>.</div>
+<section class="blue" data-group="blue"><div class="section-title"><span class="section-label">01 · Arrays</span><h2>Crear y rellenar</h2><p>La base: datos en una o varias dimensiones.</p></div><div class="table-card"><table><thead><tr><th>Código</th><th>Resultado</th><th>Qué hace</th></tr></thead><tbody><tr><td><code>import numpy as np</code></td><td>—</td><td>Importa NumPy.</td></tr><tr><td><code>np.array([1, 2, 3])</code></td><td>[1 2 3]</td><td>Crea un array 1D.</td></tr><tr><td><code>np.array([[1, 2], [3, 4]])</code></td><td>[[1 2]\n [3 4]]</td><td>Crea una matriz 2D.</td></tr><tr><td><code>np.zeros((2, 3))</code></td><td>[[0. 0. 0.]\n [0. 0. 0.]]</td><td>Rellena con ceros.</td></tr><tr><td><code>np.ones((2, 3))</code></td><td>[[1. 1. 1.]\n [1. 1. 1.]]</td><td>Rellena con unos.</td></tr><tr><td><code>np.full((2, 2), 7)</code></td><td>[[7 7]\n [7 7]]</td><td>Rellena con un valor.</td></tr><tr><td><code>np.eye(3)</code></td><td>[[1. 0. 0.]\n [0. 1. 0.]\n [0. 0. 1.]]</td><td>Crea identidad.</td></tr><tr><td><code>np.arange(0, 10, 2)</code></td><td>[0 2 4 6 8]</td><td>Genera una secuencia.</td></tr><tr><td><code>np.linspace(0, 1, 5)</code></td><td>[0.   0.25 0.5  0.75 1.  ]</td><td>Genera valores equiespaciados.</td></tr></tbody></table></div><div class="example-caption">Ejemplo práctico · copia y ejecuta</div><div class="codebox"><pre><code>import numpy as np
+
+ventas = np.array([12, 8, 15, 10])
+matriz = np.zeros((2, 3))
+semanas = np.arange(1, 5)
+print(ventas)
+print(semanas)</code></pre></div><p class="note">Ejemplo progresivo: crea datos reales, una plantilla vacía y una secuencia de índices.</p></section>
+<section class="green" data-group="green"><div class="section-title"><span class="section-label">02 · Consultar</span><h2>Mirar, indexar y cortar</h2><p>Accede justo a los datos que necesitas.</p></div><div class="table-card"><table><thead><tr><th>Código</th><th>Resultado</th><th>Qué hace</th></tr></thead><tbody><tr><td><code>a[0]</code></td><td>10</td><td>Accede por índice.</td></tr><tr><td><code>a[-1]</code></td><td>40</td><td>Accede desde el final.</td></tr><tr><td><code>a[1:4]</code></td><td>[20 30 40]</td><td>Corta un rango.</td></tr><tr><td><code>m[0, 1]</code></td><td>2</td><td>Accede a una celda.</td></tr><tr><td><code>m[:, 0]</code></td><td>[1 4]</td><td>Selecciona una columna.</td></tr><tr><td><code>a.shape</code> · <code>a.ndim</code></td><td>(4,)</td><td>Consulta forma y ejes.</td></tr><tr><td><code>a.size</code> · <code>a.dtype</code></td><td>4</td><td>Consulta tamaño y tipo.</td></tr></tbody></table></div><div class="example-caption">Ejemplo práctico · copia y ejecuta</div><div class="codebox"><pre><code>a = np.array([10, 20, 30, 40])
+m = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(a[0], a[-1])      # 10 40
+print(a[1:3])           # [20 30]
+print(m[:, 1])           # [2 5]
+print(m.shape, m.size)  # (2, 3) 6</code></pre></div></section>
+<section class="orange" data-group="orange"><div class="section-title"><span class="section-label">03 · Operar</span><h2>Calcular y resumir</h2><p>Operaciones rápidas sobre todos los elementos.</p></div><div class="table-card"><table><thead><tr><th>Código</th><th>Resultado</th><th>Qué hace</th></tr></thead><tbody><tr><td><code>a + b</code> · <code>a * b</code></td><td>[11 22 33]</td><td>Suma o multiplica arrays.</td></tr><tr><td><code>a * 10</code> · <code>a ** 2</code></td><td>[100 200 300]</td><td>Opera con un escalar.</td></tr><tr><td><code>a.sum()</code> · <code>a.mean()</code></td><td>45 · 11.25</td><td>Resume los datos.</td></tr><tr><td><code>a.max()</code> · <code>a.min()</code></td><td>15 · 8</td><td>Encuentra extremos.</td></tr><tr><td><code>a.std()</code></td><td>2.59…</td><td>Mide dispersión.</td></tr><tr><td><code>m.sum(axis=0)</code> · <code>m.sum(axis=1)</code></td><td>[5 7 9] · [ 6 15]</td><td>Resume por eje.</td></tr><tr><td><code>np.sqrt(a)</code> · <code>np.exp(a)</code></td><td>[1. 2. 3.] · [ 2.718  7.389 20.086]</td><td>Aplica matemáticas.</td></tr></tbody></table></div><div class="example-caption">Ejemplo práctico · copia y ejecuta</div><div class="codebox"><pre><code>precios = np.array([10, 12, 8, 15])
+
+print(precios * 1.21)   # IVA
+print(precios.sum())    # total: 45
+print(precios.mean())   # media: 11.25
+print(precios.max())    # máximo: 15
+print(precios.argmax()) # posición: 3</code></pre></div></section>
+<section class="green" data-group="green"><div class="section-title"><span class="section-label">04 · Filtrar</span><h2>Condiciones y búsqueda</h2><p>Quédate con los datos que cumplen una regla.</p></div><div class="table-card"><table><thead><tr><th>Código</th><th>Resultado</th><th>Qué hace</th></tr></thead><tbody><tr><td><code>a &gt; 5</code></td><td>[False  True  True]</td><td>Comprueba una condición.</td></tr><tr><td><code>a[a &gt; 5]</code></td><td>[ 7  9 10]</td><td>Filtra valores.</td></tr><tr><td><code>np.where(a &gt; 5, 1, 0)</code></td><td>[0 1 1]</td><td>Convierte una condición.</td></tr><tr><td><code>np.nonzero(a)</code></td><td>(array([1, 2]),)</td><td>Busca posiciones.</td></tr><tr><td><code>np.unique(a)</code></td><td>[1 2 3]</td><td>Elimina duplicados.</td></tr></tbody></table></div><div class="example-caption">Ejemplo práctico · copia y ejecuta</div><div class="codebox"><pre><code>notas = np.array([4, 7, 9, 5, 10])
+aprobados = notas[notas &gt;= 5]
+etiquetas = np.where(notas &gt;= 5, "aprobado", "suspenso")
+
+print(aprobados) # [ 7  9  5 10]
+print(etiquetas)</code></pre></div></section>
+<section class="purple" data-group="purple"><div class="section-title"><span class="section-label">05 · Forma y orden</span><h2>Reorganizar arrays</h2><p>Cambia la estructura sin perder los datos.</p></div><div class="table-card"><table><thead><tr><th>Código</th><th>Resultado</th><th>Qué hace</th></tr></thead><tbody><tr><td><code>a.reshape(2, 3)</code></td><td>[[1 2 3]\n [4 5 6]]</td><td>Cambia la forma.</td></tr><tr><td><code>a.flatten()</code></td><td>[1 2 3 4 5 6]</td><td>Aplana una copia.</td></tr><tr><td><code>m.T</code></td><td>[[1 4]\n [2 5]\n [3 6]]</td><td>Transpone una matriz.</td></tr><tr><td><code>np.sort(a)</code></td><td>[10 20 30 40]</td><td>Ordena una copia.</td></tr><tr><td><code>np.argsort(a)</code></td><td>[1 3 0 2]</td><td>Devuelve posiciones.</td></tr><tr><td><code>np.append(a, 7)</code> · <code>np.insert(a, 0, 5)</code></td><td>[1 2 3 7] · [5 1 2 3]</td><td>Añade elementos.</td></tr><tr><td><code>np.delete(a, 0)</code></td><td>[2 3]</td><td>Elimina elementos.</td></tr></tbody></table></div><div class="example-caption">Ejemplo práctico · copia y ejecuta</div><div class="codebox"><pre><code>datos = np.array([30, 10, 40, 20, 50, 60])
+
+m = datos.reshape(2, 3)
+print(m)
+print(np.sort(datos)) # [10 20 30 40 50 60]
+print(m.T)            # filas por columnas</code></pre></div></section>
+<section class="pink" data-group="pink"><div class="section-title"><span class="section-label">06 · Aleatorios</span><h2>Datos para probar</h2><p>Muy útiles en simulaciones y aprendizaje automático.</p></div><div class="table-card"><table><thead><tr><th>Código</th><th>Resultado</th><th>Qué hace</th></tr></thead><tbody><tr><td><code>np.random.seed(42)</code></td><td>Sin salida</td><td>Fija la semilla.</td></tr><tr><td><code>np.random.random((2, 3))</code></td><td>[[0.37 0.95 0.73]\n [0.60 0.16 0.16]]</td><td>Genera uniformes.</td></tr><tr><td><code>np.random.rand(3)</code></td><td>3 valores entre 0 y 1</td><td>Genera uniformes 1D.</td></tr><tr><td><code>np.random.randn(3)</code></td><td>3 valores normales</td><td>Genera distribución normal.</td></tr><tr><td><code>np.random.randint(0, 10, 5)</code></td><td>[6 3 7 4 6]</td><td>Genera enteros.</td></tr></tbody></table></div><div class="example-caption">Ejemplo práctico · copia y ejecuta</div><div class="codebox"><pre><code>np.random.seed(42)
+
+edades = np.random.randint(18, 66, 5)
+ruido = np.random.random(5)
+print(edades)
+print(ruido)
+print(edades.mean())</code></pre></div></section>
+
+<section class="blue" data-group="blue"><div class="section-title"><span class="section-label">07 · Referencia completa</span><h2>Funciones y atributos frecuentes</h2><p>Incluye los elementos de tus apuntes, con correcciones para que sean ejecutables.</p></div><div class="table-card"><table><thead><tr><th>Código</th><th>Resultado</th><th>Qué hace</th></tr></thead><tbody>
+<tr><td><code>np.zeros((2, 3))</code></td><td><code>[[0. 0. 0.]<br> [0. 0. 0.]]</code></td><td>Crea una matriz de ceros.</td></tr>
+<tr><td><code>np.ones((2, 3))</code></td><td><code>[[1. 1. 1.]<br> [1. 1. 1.]]</code></td><td>Crea una matriz de unos.</td></tr>
+<tr><td><code>np.eye(3)</code></td><td>Identidad 3 × 3</td><td>Crea una diagonal de unos.</td></tr>
+<tr><td><code>np.random.random((2, 3))</code></td><td>6 valores entre 0 y 1</td><td>Genera valores uniformes.</td></tr>
+<tr><td><code>a.ndim</code></td><td><code>2</code></td><td>Cuenta los ejes.</td></tr>
+<tr><td><code>a.shape</code></td><td><code>(2, 3)</code></td><td>Devuelve la forma.</td></tr>
+<tr><td><code>a.size</code></td><td><code>6</code></td><td>Cuenta elementos.</td></tr>
+<tr><td><code>a.dtype</code></td><td><code>int64</code></td><td>Indica el tipo.</td></tr>
+<tr><td><code>a.itemsize</code><br><small>(corrige <code>a.intemsize</code>)</small></td><td><code>8</code> bytes</td><td>Bytes por elemento.</td></tr>
+<tr><td><code>a.nbytes</code><br><small>(corrige <code>a.bytes</code>)</small></td><td><code>48</code> bytes</td><td>Bytes totales.</td></tr>
+<tr><td><code>np.arange(0, 5)</code><br><small>(corrige <code>np.orange()</code>)</small></td><td><code>[0 1 2 3 4]</code></td><td>Genera una secuencia.</td></tr>
+<tr><td><code>np.linspace(0, 1, 5)</code></td><td><code>[0. 0.25 0.5 0.75 1.]</code></td><td>Reparte valores equidistantes.</td></tr>
+<tr><td><code>np.random.randint(0, 10, 5)</code><br><small>(corrige <code>no.random.randint()</code>)</small></td><td>5 enteros de 0 a 9</td><td>Genera enteros aleatorios.</td></tr>
+<tr><td><code>np.sin(a)</code></td><td>Senos elemento a elemento</td><td>Calcula el seno.</td></tr>
+<tr><td><code>np.cos(a)</code></td><td>Cosenos elemento a elemento</td><td>Calcula el coseno.</td></tr>
+<tr><td><code>np.tan(a)</code></td><td>Tangentes elemento a elemento</td><td>Calcula la tangente.</td></tr>
+<tr><td><code>np.floor(a)</code></td><td><code>[1. 2. 3.]</code> desde <code>[1.2 2.8 3.1]</code></td><td>Redondea hacia abajo.</td></tr>
+<tr><td><code>np.ceil(a)</code></td><td><code>[2. 3. 4.]</code> desde <code>[1.2 2.8 3.1]</code></td><td>Redondea hacia arriba.</td></tr>
+<tr><td><code>np.rint(a)</code></td><td><code>[1. 3. 3.]</code> desde <code>[1.2 2.8 3.1]</code></td><td>Redondea al entero cercano.</td></tr>
+<tr><td><code>np.round(a, 2)</code><br><small><code>np.round_()</code> era un alias antiguo</small></td><td><code>[1.23 2.35]</code></td><td>Redondea decimales.</td></tr>
+<tr><td><code>np.exp(a)</code></td><td><code>[2.718 7.389]</code> para <code>[1, 2]</code></td><td>Calcula la exponencial.</td></tr>
+<tr><td><code>np.log(a)</code></td><td>Logaritmo natural</td><td>Calcula el logaritmo.</td></tr>
+<tr><td><code>np.sqrt(a)</code></td><td><code>[2. 3.]</code> para <code>[4, 9]</code></td><td>Calcula la raíz cuadrada.</td></tr>
+<tr><td><code>np.dot(a, b)</code><br><small>(corrige <code>no.dot()</code>)</small></td><td>Producto o suma ponderada</td><td>Calcula producto escalar.</td></tr>
+<tr><td><code>np.matmul(a, b)</code></td><td>Matriz resultante</td><td>Multiplica matrices.</td></tr>
+<tr><td><code>a @ b</code><br><small>(equivale a <code>nparray1 @ nparray</code>)</small></td><td>Mismo resultado que <code>matmul</code></td><td>Multiplica matrices con <code>@</code>.</td></tr>
+<tr><td><code>np.sort(a)</code></td><td><code>[1 2 3]</code> desde <code>[3 1 2]</code></td><td>Ordena valores.</td></tr>
+<tr><td><code>np.argsort(a)</code></td><td><code>[1 2 0]</code> desde <code>[3 1 2]</code></td><td>Devuelve índices ordenados.</td></tr>
+<tr><td><code>np.argmax(a)</code></td><td><code>1</code> para <code>[3, 8, 5]</code></td><td>Da la posición del máximo.</td></tr>
+<tr><td><code>np.argmin(a)</code></td><td><code>0</code> para <code>[3, 8, 5]</code></td><td>Da la posición del mínimo.</td></tr>
+<tr><td><code>np.where(a &gt; 5)</code></td><td>Índices que cumplen</td><td>Busca con condición.</td></tr>
+<tr><td><code>np.nonzero(a)</code></td><td>Índices de no ceros</td><td>Busca valores distintos de cero.</td></tr>
+<tr><td><code>np.unique(a)</code></td><td>Valores sin duplicados</td><td>Elimina repetidos.</td></tr>
+</tbody></table></div><div class="example-caption">Ejemplo práctico · funciones matemáticas y datos</div><div class="codebox"><button class="copy">Copiar</button><pre><code>a = np.array([1.2, 2.8, 3.1])
+print(np.floor(a))              # [1. 2. 3.]
+print(np.ceil(a))               # [2. 3. 4.]
+print(np.round(a))              # [1. 3. 3.]
+
+X = np.array([[1, 2], [3, 4]])
+print(X @ X)                    # producto matricial
+print(np.argmax(X, axis=1))     # [1 1]</code></pre></div></section>
+
+<footer>NumPy para empezar · Referencia principal: <code>google-colab-numpy.md</code> · Complemento: <code>cheetsheet_numpy.md</code></footer>
+</main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
