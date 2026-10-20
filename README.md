@@ -4,17 +4,18 @@ Curso de Dicampus la calzada
 
 ## ⚽ OBJETIVO ANALISTA 
 
-| Qué                               | Link                                                           |
-|-----------------------------------|----------------------------------------------------------------|
-| Streaming en Directo              | https://streamyard.com/watch/haK9fsUeZ8kj                      |
-| Grabación del Directo             | https://www.youtube.com/live/VuDvoFcecmA                       |
-| Dashboard de datos con PowerBi:   | [Ver Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYzE4MWViMGYtMzQ5MS00NzlkLWFjZTgtNTA5NjI0ODFiNmM4IiwidCI6ImQwYmFmMDEyLTM2M2UtNGEwOS04NDQ0LTgxMDI3YTZmNWVhYyIsImMiOjl9)|
-| 7 Casos de Uso de Power BI        | https://www.youtube.com/watch?v=bkG4K4hwxB4&t=338s             |
-| Web                               | https://formacion.objetivoanalista.com/taller-datos-futbol/    |
-| Cómo instalar PowerBi             | https://www.youtube.com/watch?v=M1dyitDoz7s                    |
-| FBRef                             | https://fbref.com/en/squads/bb9efd50/Sporting-Gijon-Stats      |
-| Transfer Mark                     | https://www.transfermarkt.es/                                  |
-| Web Curso                         | https://objetivoanalista.com/datos360/                         |
+| Qué                                       | Link                                                           |
+|-------------------------------------------|----------------------------------------------------------------|
+| Streaming en Directo                      | https://streamyard.com/watch/haK9fsUeZ8kj                      |
+| Grabación del Directo                     | https://www.youtube.com/live/VuDvoFcecmA                       |
+| Dashboard de datos con PowerBi:           | [Ver Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYzE4MWViMGYtMzQ5MS00NzlkLWFjZTgtNTA5NjI0ODFiNmM4IiwidCI6ImQwYmFmMDEyLTM2M2UtNGEwOS04NDQ0LTgxMDI3YTZmNWVhYyIsImMiOjl9)|
+| 7 Casos de Uso de Power BI                | https://www.youtube.com/watch?v=bkG4K4hwxB4&t=338s             |
+| Web                                       | https://formacion.objetivoanalista.com/taller-datos-futbol/    |
+| Cómo instalar PowerBi                     | https://www.youtube.com/watch?v=M1dyitDoz7s                    |
+| Cómo instalar Python para datos de Futbol |https://youtu.be/pBogCDs7pMY?is=KzKd95He_04wEqWg                |
+| FBRef                                     | https://fbref.com/en/squads/bb9efd50/Sporting-Gijon-Stats      |
+| Transfer Mark                             | https://www.transfermarkt.es/                                  |
+| Web Curso                                 | https://objetivoanalista.com/datos360/                         |
 
 
 ## 👨‍🏫 Cosas de Clase
