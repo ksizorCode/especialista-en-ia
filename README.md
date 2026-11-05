@@ -1,6 +1,9 @@
 # 🤖 Especialista en iA
 Curso de Dicampus la calzada
 
+# VSVCode - LiveShare
+https://prod.liveshare.vsengsaas.visualstudio.com/join?425C30E5ECE8C488A07E58771E483783ACE6
+
 
 ## Jornadas Futuro y Tecnología 2026
 - https://www.youtube.com/watch?v=Ud0uI89hgDA
