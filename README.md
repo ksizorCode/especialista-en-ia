@@ -1,6 +1,10 @@
 # 🤖 Especialista en iA
 Curso de Dicampus la calzada
 
+
+# Atlas de algoritmos de Machine Learning (iA)
+https://atlas-algoritmos-ia.ana-canteli.chatgpt.site/
+
 # VSVCode - LiveShare
 https://prod.liveshare.vsengsaas.visualstudio.com/join?425C30E5ECE8C488A07E58771E483783ACE6
 
