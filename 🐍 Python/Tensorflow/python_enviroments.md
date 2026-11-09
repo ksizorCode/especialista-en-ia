@@ -14,7 +14,7 @@ py -3.12 --version
 ```
 
 Si la versión 3.12 no esta instalada, la instalamos:
-``
+```python
 py install 3.12
 ```
 
