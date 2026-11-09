@@ -5,7 +5,7 @@ Como instalar Tenworflow a través del terminal debes de tener instalada la vers
 Vamos a comprovar qué versión de Python tenemos instalda
 ```python
 py -0p
-``
+```
 
 Esto nos devolverá las versiones de Python que están isntaldas en nuestro ordenador. Tambiién podemos comprobar específicamente si existe la 3.12:
 
@@ -18,10 +18,20 @@ Si la versión 3.12 no esta instalada, la instalamos:
 py install 3.12
 ```
 
+Instalamos Tensorflow:
+```python
 py -3.12 -m pip install tensorflow
+```
+Comprobamos la versión instalada (es una manera de verificar que se ha instalado correctamente:
+```python
 py -3.12 -c "import tensorflow as tf; print(tf.__version__)"
+```
 
+
+Si usamos Notebook instalamos también el kernel:
+```python
 py -3.12 -m pip install ipykernel
+```
 
 
 
