@@ -2,9 +2,9 @@
 Curso de Dicampus la calzada
 
 ## 🎈 Saber más;
-https://cienciadedatos.net/
-https://www.mclibre.org/consultar/python/
-https://aprendeconalf.es/docencia/python/
+- https://cienciadedatos.net/
+- https://www.mclibre.org/consultar/python/
+- https://aprendeconalf.es/docencia/python/
 
 
 
