@@ -1,15 +1,19 @@
 # 🤖 Especialista en iA
 Curso de Dicampus la calzada
 
+## 🎈 Saber más;
+https://cienciadedatos.net/
+https://www.mclibre.org/consultar/python/
+https://aprendeconalf.es/docencia/python/
 
-# Atlas de algoritmos de Machine Learning (iA)
+
+
+
+## 🎡 Atlas de algoritmos de Machine Learning (iA)
 https://atlas-algoritmos-ia.ana-canteli.chatgpt.site/
 
-# VSVCode - LiveShare
-https://prod.liveshare.vsengsaas.visualstudio.com/join?425C30E5ECE8C488A07E58771E483783ACE6
 
-
-## Jornadas Futuro y Tecnología 2026
+## 🎤 Jornadas Futuro y Tecnología 2026
 - https://www.youtube.com/watch?v=Ud0uI89hgDA
 - https://www.youtube.com/watch?v=nG8DfTprRKI
 
