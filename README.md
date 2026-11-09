@@ -10,7 +10,7 @@ Curso de Dicampus la calzada
 
 
 ## 🎡 Atlas de algoritmos de Machine Learning (iA)
-https://atlas-algoritmos-ia.ana-canteli.chatgpt.site/
+- https://atlas-algoritmos-ia.ana-canteli.chatgpt.site/
 
 
 ## 🎤 Jornadas Futuro y Tecnología 2026
