@@ -2,6 +2,7 @@
 Curso de Dicampus la calzada
 
 ## 🧶 Tensorflow y Redes Neuronales
+https://www.youtube.com/watch?v=jKCQsndqEGQ&t=34s
 
 - Redes Neuronales: https://www.youtube.com/watch?v=iX_on3VxZzk&t=493s
 - Red Neuronal (OMES): https://www.youtube.com/watch?v=hUkRoGkqnFk
