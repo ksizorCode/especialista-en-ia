@@ -1,7 +1,18 @@
 # 🤖 Especialista en iA
 Curso de Dicampus la calzada
 
-## 🎈 Saber más;
+## 🧶 Tensorflow y Redes Neuronales
+
+- Redes Neuronales: https://www.youtube.com/watch?v=iX_on3VxZzk&t=493s
+- Red Neuronal (OMES): https://www.youtube.com/watch?v=hUkRoGkqnFk
+- Tu primera red neuronal: https://www.youtube.com/watch?v=hUkRoGkqnFk&t=730s
+- Clasificación de prendas de ropa: https://www.youtube.com/watch?v=j6eGHROLKP8&t=906s
+- Clasificación de Perros o Gatos: https://www.youtube.com/watch?v=DbwKbsCWPSg&t=1884s
+- Reconocimiento Escritura: https://www.youtube.com/watch?v=ZyauOVzjg9Q
+
+
+
+## 🎈 Más referencias de Ciencia de Datos + Python:
 - https://cienciadedatos.net/
 - https://www.mclibre.org/consultar/python/
 - https://aprendeconalf.es/docencia/python/
