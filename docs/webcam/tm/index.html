@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>Detector de objetos | Teachable Machine</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #172033;
+        background: #f4f7fb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 32px 16px;
+      }
+
+      main {
+        width: min(100%, 760px);
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        text-align: center;
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
+      }
+
+      .intro {
+        margin: 0 0 24px;
+        color: #596579;
+        text-align: center;
+      }
+
+      .panel {
+        padding: 20px;
+        border: 1px solid #e1e7f0;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 12px 32px #26334d12;
+      }
+
+      video {
+        display: block;
+        width: min(100%, 520px);
+        max-height: 60vh;
+        margin: 0 auto 16px;
+        border-radius: 12px;
+        background: #151b28;
+        object-fit: cover;
+      }
+
+      video.mirrored {
+        transform: scaleX(-1);
+      }
+
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      button {
+        min-height: 44px;
+        padding: 10px 16px;
+        border: 0;
+        border-radius: 10px;
+        color: #fff;
+        background: #315ee8;
+        font: inherit;
+        font-weight: 650;
+        cursor: pointer;
+      }
+
+      button.secondary {
+        color: #24314c;
+        background: #e9eef8;
+      }
+
+      button:disabled {
+        opacity: .55;
+        cursor: not-allowed;
+      }
+
+      #estado {
+        min-height: 24px;
+        margin: 16px 0 0;
+        color: #596579;
+        text-align: center;
+      }
+
+      #estado.error {
+        color: #b42318;
+      }
+
+      #resultado {
+        margin-top: 20px;
+      }
+
+      #clase-principal {
+        margin: 0 0 16px;
+        color: #172033;
+        text-align: center;
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        font-weight: 750;
+        overflow-wrap: anywhere;
+      }
+
+      .clase {
+        margin-top: 12px;
+      }
+
+      .clase-cabecera {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 5px;
+      }
+
+      .barra {
+        height: 10px;
+        overflow: hidden;
+        border-radius: 99px;
+        background: #e9eef8;
+      }
+
+      .barra > span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: #315ee8;
+        transition: width .15s ease;
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 22px 12px;
+        }
+
+        .panel {
+          padding: 14px;
+        }
+
+        button {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Detector de objetos</h1>
+      <p class="intro">Clasificación en vivo con el modelo entrenado en Teachable Machine.</p>
+
+      <section class="panel" aria-label="Cámara y resultados">
+        <video id="video" playsinline autoplay muted></video>
+        <div class="controls">
+          <button id="iniciar" type="button" disabled>Activar cámara</button>
+          <button id="cambiar-camara" class="secondary" type="button" disabled>Cambiar cámara</button>
+        </div>
+        <p id="estado" role="status" aria-live="polite">Cargando el modelo...</p>
+        <div id="resultado" aria-live="polite" hidden>
+          <p id="clase-principal"></p>
+          <div id="clases"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.4/dist/teachablemachine-image.min.js"></script>
+    <script>
+      const video = document.getElementById("video");
+      const status = document.getElementById("estado");
+      const startButton = document.getElementById("iniciar");
+      const switchButton = document.getElementById("cambiar-camara");
+      const resultPanel = document.getElementById("resultado");
+      const mainClass = document.getElementById("clase-principal");
+      const classesContainer = document.getElementById("clases");
+
+      let model = null;
+      let currentStream = null;
+      let facingMode = "environment";
+      let predicting = false;
+
+      function setStatus(message, isError = false) {
+        status.textContent = message;
+        status.classList.toggle("error", isError);
+      }
+
+      async function loadModel() {
+        const modelUrl = new URL("modelo/model (3).json", window.location.href).href;
+        const metadataUrl = new URL("modelo/metadata.json", window.location.href).href;
+
+        try {
+          model = await tmImage.load(modelUrl, metadataUrl);
+          startButton.disabled = false;
+          setStatus("Modelo cargado. Activa la cámara para empezar.");
+        } catch (error) {
+          console.error("No se pudo cargar el modelo de Teachable Machine:", error);
+          setStatus("No se pudo cargar el modelo: " + error.message, true);
+        }
+      }
+
+      async function startCamera() {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+          setStatus("Este navegador no permite acceder a la cámara.", true);
+          return;
+        }
+
+        startButton.disabled = true;
+        setStatus("Solicitando acceso a la cámara...");
+
+        let newStream;
+        try {
+          newStream = await navigator.mediaDevices.getUserMedia({
+            audio: false,
+            video: {
+              facingMode: { ideal: facingMode },
+              width: { ideal: 640 },
+              height: { ideal: 480 }
+            }
+          });
+          video.srcObject = newStream;
+          await video.play();
+
+          if (currentStream) {
+            currentStream.getTracks().forEach(track => track.stop());
+          }
+          currentStream = newStream;
+          video.classList.toggle("mirrored", facingMode === "user");
+          switchButton.disabled = false;
+          startButton.textContent = "Reiniciar cámara";
+          setStatus("Cámara activa. Clasificando...");
+          predictFrame();
+        } catch (error) {
+          if (newStream) {
+            newStream.getTracks().forEach(track => track.stop());
+          }
+          console.error("No se pudo iniciar la cámara:", error);
+          setStatus("No se pudo acceder a la cámara. Revisa los permisos y abre esta página mediante HTTPS o localhost.", true);
+        } finally {
+          startButton.disabled = false;
+        }
+      }
+
+      async function predictFrame() {
+        if (!currentStream || predicting || video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
+          if (currentStream) {
+            requestAnimationFrame(predictFrame);
+          }
+          return;
+        }
+
+        predicting = true;
+        try {
+          const predictions = await model.predict(video);
+          predictions.sort((a, b) => b.probability - a.probability);
+          mainClass.textContent = predictions[0].className;
+          resultPanel.hidden = false;
+
+          classesContainer.replaceChildren(...predictions.map(prediction => {
+            const row = document.createElement("div");
+            row.className = "clase";
+
+            const header = document.createElement("div");
+            header.className = "clase-cabecera";
+
+            const name = document.createElement("span");
+            name.textContent = prediction.className;
+
+            const confidence = document.createElement("span");
+            confidence.textContent = `${(prediction.probability * 100).toFixed(1)}%`;
+
+            const bar = document.createElement("div");
+            bar.className = "barra";
+            bar.setAttribute("role", "progressbar");
+            bar.setAttribute("aria-label", prediction.className);
+            bar.setAttribute("aria-valuemin", "0");
+            bar.setAttribute("aria-valuemax", "100");
+            bar.setAttribute("aria-valuenow", (prediction.probability * 100).toFixed(1));
+
+            const fill = document.createElement("span");
+            fill.style.width = `${Math.max(0, Math.min(100, prediction.probability * 100))}%`;
+            bar.append(fill);
+            header.append(name, confidence);
+            row.append(header, bar);
+            return row;
+          }));
+        } catch (error) {
+          console.error("Falló la predicción:", error);
+          setStatus("No se pudo analizar la imagen de la cámara: " + error.message, true);
+          return;
+        } finally {
+          predicting = false;
+        }
+
+        if (currentStream) {
+          requestAnimationFrame(predictFrame);
+        }
+      }
+
+      async function switchCamera() {
+        facingMode = facingMode === "user" ? "environment" : "user";
+        await startCamera();
+      }
+
+      startButton.addEventListener("click", startCamera);
+      switchButton.addEventListener("click", switchCamera);
+      loadModel();
+    </script>
+  </body>
+</html>
