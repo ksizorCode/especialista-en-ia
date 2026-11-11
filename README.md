@@ -1,6 +1,10 @@
 # 🤖 Especialista en iA
 Curso de Dicampus la calzada
 
+# 📹 Testeos Webcam
+https://ksizorcode.github.io/especialista-en-ia/
+
+
 ## 🧶 Tensorflow y Redes Neuronales
 https://www.youtube.com/watch?v=jKCQsndqEGQ&t=34s
 
