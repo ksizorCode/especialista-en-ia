@@ -1,0 +1,88 @@
+{
+  "target": "min_retraso",
+  "delay_threshold_minutes": 0,
+  "input_fields": [
+    "aerolinea",
+    "origen",
+    "fecha_vuelo",
+    "hora_salida_programada",
+    "hora_llegada_programada",
+    "duracion_vuelo",
+    "temperatura_origen",
+    "temperatura_destino",
+    "lluvia_origen",
+    "lluvia_destino",
+    "viento_destino",
+    "festivo"
+  ],
+  "categorical_features": {
+    "aerolinea": [
+      "Air Europa",
+      "IBERIA",
+      "Iberia Express",
+      "Ryanair",
+      "Vueling"
+    ],
+    "origen": [
+      "AGP",
+      "BCN",
+      "LPA",
+      "MAD",
+      "PMI",
+      "SCQ",
+      "TFS",
+      "VLC"
+    ],
+    "dia_semana": [
+      "Friday",
+      "Monday",
+      "Saturday",
+      "Sunday",
+      "Thursday",
+      "Tuesday",
+      "Wednesday"
+    ]
+  },
+  "numeric_features": [
+    "hora_salida_programada_min",
+    "hora_llegada_programada_min",
+    "duracion_vuelo",
+    "temperatura_origen",
+    "temperatura_destino",
+    "lluvia_origen",
+    "lluvia_destino",
+    "viento_destino",
+    "festivo"
+  ],
+  "feature_order": [
+    "aerolinea=Air Europa",
+    "aerolinea=IBERIA",
+    "aerolinea=Iberia Express",
+    "aerolinea=Ryanair",
+    "aerolinea=Vueling",
+    "origen=AGP",
+    "origen=BCN",
+    "origen=LPA",
+    "origen=MAD",
+    "origen=PMI",
+    "origen=SCQ",
+    "origen=TFS",
+    "origen=VLC",
+    "dia_semana=Friday",
+    "dia_semana=Monday",
+    "dia_semana=Saturday",
+    "dia_semana=Sunday",
+    "dia_semana=Thursday",
+    "dia_semana=Tuesday",
+    "dia_semana=Wednesday",
+    "hora_salida_programada_min",
+    "hora_llegada_programada_min",
+    "duracion_vuelo",
+    "temperatura_origen",
+    "temperatura_destino",
+    "lluvia_origen",
+    "lluvia_destino",
+    "viento_destino",
+    "festivo"
+  ]
+}
