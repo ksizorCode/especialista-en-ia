@@ -34,3 +34,9 @@ Crear una réplica completa de la web en `/fr` adaptada al **francés de Francia
 ## Verificación final
 - Revisa que no queden bloques sin traducir en `/fr` ni enlaces rotos.
 - Entrega un resumen con las páginas creadas, el mapeo de URLs y las imágenes `_fr` generadas o pendientes.
+
+
+Cuando este skill hazmelo saber haciendo lo siguiente:
+
+- añade en la raiz del archivo un documento llamado informe.md donde indiques los skills utilizados
+- y despidete al terminar con una frase francés y 2 emoticonos franceses.
